@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bienvenido al Sitio de la Escuela de Formación de Johana Dominé</title>
+</head>
+<body>
+	<div id="top_content"></div>
+	<div id="container">
+		<header>
+			<div>
+				<h1 class="logo">
+					<img src="" alt="">
+					<p>
+						<span>Escuela de Formación</span>
+						<span>JOHANA DOMINÉ</span>
+					</p>
+				</h1>
+				<a href="#">Facebook</a>
+			</div>
+			<nav>
+				<ul>
+					<li>HOME</li>
+					<li>ESCUELA</li>
+					<li>CAPACITACIONES</li>
+					<li>EVENTOS</li>
+					<li>GALERIA</li>
+					<li>CONTACTO</li>
+				</ul>
+			</nav>
+		</header>
+		<section class="content">
+			{% block content %}{% endblock %}
+		</section>
+	</div>
+	<div class="recommendations"></div>
+	<footer>
+		<div id="about">
+			<p><span>Escuela de Formación Profesional Johana Dominé</span> - Arrecifes Pcia. de Buenos Aires</p>
+		</div>
+		<div class="sliders"></div>
+	</footer>
+</body>
+</html>
