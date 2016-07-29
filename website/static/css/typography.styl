@@ -1,3 +1,5 @@
+/* ===== FONT-FACE ==========================================================================================*/
+
 @font-face
 	font-family 'Garamond'
 	font-style normal
@@ -11,6 +13,16 @@
 @font-face
 	font-family 'HelveticaLtStd'
 	font-style normal
+	font-weight normal
+	src url(../fonts/HelveticaLTStd-Light.eot?#iefix) format('embedded-opentype'),  
+		url(../fonts/HelveticaLTStd-Light.otf) format('opentype'),
+		url(../fonts/HelveticaLTStd-Light.woff) format('woff'), 
+		url(../fonts/HelveticaLTStd-Light.ttf) format('truetype'), 
+		url(../fonts/HelveticaLTStd-Light.svg#HelveticaLTStd-Light) format('svg')
+
+@font-face
+	font-family 'HelveticaLtStd'
+	font-style normal
 	font-weight bold
 	src url(../fonts/HelveticaLTStd-Bold.eot?#iefix) format('embedded-opentype'),
 		url(../fonts/HelveticaLTStd-Bold.otf) format('opentype'),
@@ -18,15 +30,58 @@
 	 	url(../fonts/HelveticaLTStd-Bold.ttf) format('truetype'),
 	 	url(../fonts/HelveticaLTStd-Bold.svg#HelveticaLTStd-Bold) format('svg')
 
+@font-face
+	font-family 'Calibri'
+	font-style italic
+	font-weight normal
+	src url(../fonts/Calibri-Italic.eot?#iefix) format('embedded-opentype'), 
+		url(../fonts/Calibri-Italic.woff) format('woff'), 
+		url(../fonts/Calibri-Italic.ttf) format('truetype'), 
+		url(../fonts/Calibri-Italic.svg#Calibri-Italic) format('svg')
+
+@font-face
+	font-family 'Calibri'
+	font-style normal
+	font-weight bold
+	src url(../fonts/Calibri-Bold.eot?#iefix) format('embedded-opentype'), 
+		url(../fonts/Calibri-Bold.woff) format('woff'), 
+		url(../fonts/Calibri-Bold.ttf) format('truetype'), 
+		url(../fonts/Calibri-Bold.svg#Calibri-Bold) format('svg')
+
+
+/* ===== FONT STYLES ==========================================================================================*/
+
+body
+	font-family 'HelveticaLtStd'
 
 nav
-	font-family 'HelveticaLtStd'
 	font-weight bold
 
+#about
+	span
+		font-weight bold
+
 #top-content
-	p
-		font-family 'Garamond'
+	font-family 'Garamond'
+	div:nth-child(2)
+		font-size 2em
+		line-height .7em
+		p:nth-child(2)
+			font-size .8em
 
 .logo
-	p
-		font-family 'Garamond'
+	font-family 'Garamond'
+	font-size 1.5em
+	span:nth-child(2)
+		font-size 1.2em
+
+.recommendations
+	font-family 'Calibri'
+	div:nth-child(2)
+		p:nth-child(1)
+			font-style italic
+		p:nth-child(2)
+			font-weight bold
+
+.slider
+	font-family 'Calibri'

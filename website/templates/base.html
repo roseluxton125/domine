@@ -9,8 +9,8 @@
 </head>
 <body>
 	<div id="top-content">
-		<div><img src="" alt=""></div>
-		<div>
+		<div><img src="{% static "img/vertebral_top.png" %}" alt="Escuela de Formación Johana Dominé"></div><!--
+		--><div>
 			<p>CENTRO</p>
 			<p>de entrenamiento y postura</p>
 		</div>
@@ -19,22 +19,22 @@
 		<header>
 			<div>
 				<h1 class="logo">
-					<img src="" alt="">
+					<img src="{% static "img/logo.png" %}" alt="Escuela de Formación Johana Dominé">
 					<p>
 						<span>Escuela de Formación</span>
 						<span>JOHANA DOMINÉ</span>
 					</p>
 				</h1>
-				<a href="#">Facebook</a>
+				<a href="#" class="facebook"><img src="{% static "img/fb_logo.png" %}" alt="Visita nuestra Fan Page!"></a>
 			</div>
 			<nav>
 				<ul>
-					<li>HOME</li>
-					<li>ESCUELA</li>
-					<li>CAPACITACIONES</li>
-					<li>EVENTOS</li>
-					<li>GALERIA</li>
-					<li>CONTACTO</li>
+					<li>HOME</li><!--
+					--><li>ESCUELA</li><!--
+					--><li>CAPACITACIONES</li><!--
+					--><li>EVENTOS</li><!--
+					--><li>GALERIA</li><!--
+					--><li>CONTACTO</li>
 				</ul>
 			</nav>
 		</header>
@@ -42,12 +42,22 @@
 			{% block content %}{% endblock %}
 		</section>
 	</div>
-	<div class="recommendations"></div>
+	<div class="recommendations">
+		<div><img src="" alt=""></div>
+		<div>
+			<p>la gente demanda tomar éstas clases</p>
+			<p>Excelente resultado</p>
+		</div>
+		<div><img src="" alt=""></div>
+	</div>
 	<footer>
 		<div id="about">
 			<p><span>Escuela de Formación Profesional Johana Dominé</span> - Arrecifes Pcia. de Buenos Aires</p>
 		</div>
-		<div class="sliders"></div>
+		<div class="slider">
+			<p>El Método ofrece</p>
+			<p>al PROFESOR</p>
+		</div>
 	</footer>
 </body>
 </html>

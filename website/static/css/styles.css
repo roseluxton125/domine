@@ -1,5 +1,4 @@
-/* ===== Domine Stylesheet ========================================================================================== */
-/*
+/* ===== Domine Stylesheet ==========================================================================================
 
 Project:    Johana Domine
 Version:    1.0
@@ -26,20 +25,126 @@ Author URL: http://luciano.im
 @font-face {
   font-family: 'HelveticaLtStd';
   font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/HelveticaLTStd-Light.eot?#iefix") format('embedded-opentype'), url("../fonts/HelveticaLTStd-Light.otf") format('opentype'), url("../fonts/HelveticaLTStd-Light.woff") format('woff'), url("../fonts/HelveticaLTStd-Light.ttf") format('truetype'), url("../fonts/HelveticaLTStd-Light.svg#HelveticaLTStd-Light") format('svg');
+}
+@font-face {
+  font-family: 'HelveticaLtStd';
+  font-style: normal;
   font-weight: bold;
   src: url("../fonts/HelveticaLTStd-Bold.eot?#iefix") format('embedded-opentype'), url("../fonts/HelveticaLTStd-Bold.otf") format('opentype'), url("../fonts/HelveticaLTStd-Bold.woff") format('woff'), url("../fonts/HelveticaLTStd-Bold.ttf") format('truetype'), url("../fonts/HelveticaLTStd-Bold.svg#HelveticaLTStd-Bold") format('svg');
 }
-nav {
+@font-face {
+  font-family: 'Calibri';
+  font-style: italic;
+  font-weight: normal;
+  src: url("../fonts/Calibri-Italic.eot?#iefix") format('embedded-opentype'), url("../fonts/Calibri-Italic.woff") format('woff'), url("../fonts/Calibri-Italic.ttf") format('truetype'), url("../fonts/Calibri-Italic.svg#Calibri-Italic") format('svg');
+}
+@font-face {
+  font-family: 'Calibri';
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/Calibri-Bold.eot?#iefix") format('embedded-opentype'), url("../fonts/Calibri-Bold.woff") format('woff'), url("../fonts/Calibri-Bold.ttf") format('truetype'), url("../fonts/Calibri-Bold.svg#Calibri-Bold") format('svg');
+}
+body {
   font-family: 'HelveticaLtStd';
+}
+nav {
   font-weight: bold;
 }
-#top-content p {
+#about span {
+  font-weight: bold;
+}
+#top-content {
   font-family: 'Garamond';
 }
-.logo p {
+#top-content div:nth-child(2) {
+  font-size: 2em;
+  line-height: 0.7em;
+}
+#top-content div:nth-child(2) p:nth-child(2) {
+  font-size: 0.8em;
+}
+.logo {
   font-family: 'Garamond';
+  font-size: 1.5em;
+}
+.logo span:nth-child(2) {
+  font-size: 1.2em;
+}
+.recommendations {
+  font-family: 'Calibri';
+}
+.recommendations div:nth-child(2) p:nth-child(1) {
+  font-style: italic;
+}
+.recommendations div:nth-child(2) p:nth-child(2) {
+  font-weight: bold;
+}
+.slider {
+  font-family: 'Calibri';
 }
 body {
   margin: 0;
   padding: 0;
+}
+h1 {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+#container {
+  background-color: rgba(217,218,219,0.8);
+  padding: 1em;
+  position: relative;
+}
+#top-content {
+  margin: 2em 0 1.2em 0;
+}
+#top-content div {
+  display: inline-block;
+}
+#top-content div:nth-child(2) {
+  color: #97be0c;
+  float: right;
+  text-align: center;
+}
+.facebook {
+  position: absolute;
+  top: 0;
+  right: 1em;
+}
+.logo {
+  color: #6f7072;
+}
+.logo img {
+  display: inline-block;
+  vertical-align: bottom;
+}
+.logo p {
+  display: inline-block;
+  margin-bottom: 0.5em;
+  vertical-align: bottom;
+  text-align: center;
+}
+.logo p span {
+  display: block;
+}
+nav {
+  background-color: #275d24;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+nav ul li {
+  display: inline-block;
+  text-align: center;
+  width: 16.666666666666668%;
 }
