@@ -1,7 +1,12 @@
 body
-	// background url('../img/background.jpg')
+	background-image url('../img/background.jpg')
+	background-repeat no-repeat
+	background-size cover
 	margin 0
 	padding 0
+
+a
+	text-decoration none
 
 h1
 	margin 0
@@ -53,7 +58,7 @@ ul
 /* ==== NAV ====================== */
 
 nav
-	background-color green-nav
+	background-color green-light
 	padding .5em
 	border-radius .5em
 	ul
@@ -61,3 +66,46 @@ nav
 			display inline-block
 			text-align center
 			width (100% / 6)
+			a
+				color white
+
+/* ==== CONTENT ====================== */
+
+.content
+	background-color rgba(245, 245, 246, .8)
+
+
+/* ==== FOOTER ====================== */
+
+#about
+	margin-top 2em
+	text-align center
+	p > span
+		border-top 1px solid black
+		padding-top .5em
+
+.recommendations
+	background-color green-light-bkg
+	padding 1em
+	div
+		display inline-block
+		vertical-align middle
+	#logo2
+		text-align right
+		width 20%
+	#messages
+		color white
+		text-align center
+		width 60%
+	#news
+		text-align left
+		width 20%
+		div
+			background-color white
+			border-radius .5em
+			color green-light
+			text-align center
+			padding .2em
+			width 80px
+			span
+				display block

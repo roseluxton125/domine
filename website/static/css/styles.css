@@ -52,7 +52,7 @@ body {
 nav {
   font-weight: bold;
 }
-#about span {
+#about span > span {
   font-weight: bold;
 }
 #top-content {
@@ -81,12 +81,28 @@ nav {
 .recommendations div:nth-child(2) p:nth-child(2) {
   font-weight: bold;
 }
+.recommendations #messages {
+  font-size: 2em;
+}
+.recommendations #news {
+  font-family: 'HelveticaLtStd';
+  font-weight: bold;
+}
+.recommendations #news span:nth-child(1) {
+  font-size: 3em;
+}
 .slider {
   font-family: 'Calibri';
 }
 body {
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0;
   padding: 0;
+}
+a {
+  text-decoration: none;
 }
 h1 {
   margin: 0;
@@ -139,7 +155,7 @@ ul li {
   display: block;
 }
 nav {
-  background-color: #275d24;
+  background-color: #97be0c;
   padding: 0.5em;
   border-radius: 0.5em;
 }
@@ -147,4 +163,50 @@ nav ul li {
   display: inline-block;
   text-align: center;
   width: 16.666666666666668%;
+}
+nav ul li a {
+  color: #fff;
+}
+.content {
+  background-color: rgba(245,245,246,0.8);
+}
+#about {
+  margin-top: 2em;
+  text-align: center;
+}
+#about p > span {
+  border-top: 1px solid #000;
+  padding-top: 0.5em;
+}
+.recommendations {
+  background-color: rgba(151,190,12,0.8);
+  padding: 1em;
+}
+.recommendations div {
+  display: inline-block;
+  vertical-align: middle;
+}
+.recommendations #logo2 {
+  text-align: right;
+  width: 20%;
+}
+.recommendations #messages {
+  color: #fff;
+  text-align: center;
+  width: 60%;
+}
+.recommendations #news {
+  text-align: left;
+  width: 20%;
+}
+.recommendations #news div {
+  background-color: #fff;
+  border-radius: 0.5em;
+  color: #97be0c;
+  text-align: center;
+  padding: 0.2em;
+  width: 80px;
+}
+.recommendations #news div span {
+  display: block;
 }
