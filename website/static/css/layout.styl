@@ -1,7 +1,9 @@
 body
 	background-image url('../img/background.jpg')
 	background-repeat no-repeat
-	background-size cover
+	// background-attachment fixed
+	background-position 50% 40%
+	background-size 240% auto
 	margin 0
 	padding 0
 
@@ -32,10 +34,13 @@ ul
 	margin 2em 0 1.2em 0
 	div
 		display inline-block
-	div:nth-child(2)
-		color green-light
-		float right
-		text-align center
+		&:nth-child(2)
+			color green-light
+			float right
+			text-align center
+	img
+		//Fix img inline
+		vertical-align middle
 
 .facebook
 	position absolute
@@ -55,19 +60,24 @@ ul
 		span
 			display block
 
+
 /* ==== NAV ====================== */
 
 nav
 	background-color green-light
-	padding .5em
 	border-radius .5em
+	margin-top 1em
+	padding .3em
 	ul
 		li
 			display inline-block
 			text-align center
 			width (100% / 6)
+			//Fix line-height
+			margin-top .5em
 			a
 				color white
+
 
 /* ==== CONTENT ====================== */
 
@@ -78,7 +88,7 @@ nav
 /* ==== FOOTER ====================== */
 
 #about
-	margin-top 2em
+	margin-top 5em
 	text-align center
 	p > span
 		border-top 1px solid black
@@ -86,6 +96,7 @@ nav
 
 .recommendations
 	background-color green-light-bkg
+	margin-top 2em
 	padding 1em
 	div
 		display inline-block
@@ -93,19 +104,46 @@ nav
 	#logo2
 		text-align right
 		width 20%
+		img
+			//Fix img inline
+			vertical-align middle
 	#messages
 		color white
 		text-align center
 		width 60%
+		p
+			line-height 1em
 	#news
 		text-align left
 		width 20%
 		div
 			background-color white
-			border-radius .5em
+			border-radius .7em
 			color green-light
 			text-align center
-			padding .2em
-			width 80px
+			padding .5em
+			width 100px
 			span
 				display block
+				&:nth-child(2)
+					//Fix line-height
+					margin-top -1.2em
+
+.slider
+	color green-dark
+	background-color green-light
+	margin-top 1em
+	padding .7em
+	text-align center
+	div
+		display inline-block
+		vertical-align middle
+		&:nth-child(2)
+			margin 0 .4em
+			p
+				line-height .9em
+		&:nth-child(3)
+			transform rotate(180deg)
+	img
+		//Fix img inline
+		vertical-align middle

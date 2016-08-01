@@ -82,22 +82,30 @@ nav {
   font-weight: bold;
 }
 .recommendations #messages {
-  font-size: 2em;
+  font-size: 2.2em;
 }
 .recommendations #news {
   font-family: 'HelveticaLtStd';
   font-weight: bold;
 }
 .recommendations #news span:nth-child(1) {
-  font-size: 3em;
+  font-size: 5em;
+}
+.recommendations #news span:nth-child(2) {
+  font-size: 1.3em;
 }
 .slider {
   font-family: 'Calibri';
+  font-size: 3.5em;
+}
+.slider div:nth-child(2) p:nth-child(2) {
+  font-size: 1.33em;
 }
 body {
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: 50% 40%;
+  background-size: 240% auto;
   margin: 0;
   padding: 0;
 }
@@ -133,6 +141,9 @@ ul li {
   float: right;
   text-align: center;
 }
+#top-content img {
+  vertical-align: middle;
+}
 .facebook {
   position: absolute;
   top: 0;
@@ -156,13 +167,15 @@ ul li {
 }
 nav {
   background-color: #97be0c;
-  padding: 0.5em;
   border-radius: 0.5em;
+  margin-top: 1em;
+  padding: 0.3em;
 }
 nav ul li {
   display: inline-block;
   text-align: center;
   width: 16.666666666666668%;
+  margin-top: 0.5em;
 }
 nav ul li a {
   color: #fff;
@@ -171,7 +184,7 @@ nav ul li a {
   background-color: rgba(245,245,246,0.8);
 }
 #about {
-  margin-top: 2em;
+  margin-top: 5em;
   text-align: center;
 }
 #about p > span {
@@ -180,6 +193,7 @@ nav ul li a {
 }
 .recommendations {
   background-color: rgba(151,190,12,0.8);
+  margin-top: 2em;
   padding: 1em;
 }
 .recommendations div {
@@ -190,10 +204,16 @@ nav ul li a {
   text-align: right;
   width: 20%;
 }
+.recommendations #logo2 img {
+  vertical-align: middle;
+}
 .recommendations #messages {
   color: #fff;
   text-align: center;
   width: 60%;
+}
+.recommendations #messages p {
+  line-height: 1em;
 }
 .recommendations #news {
   text-align: left;
@@ -201,12 +221,39 @@ nav ul li a {
 }
 .recommendations #news div {
   background-color: #fff;
-  border-radius: 0.5em;
+  border-radius: 0.7em;
   color: #97be0c;
   text-align: center;
-  padding: 0.2em;
-  width: 80px;
+  padding: 0.5em;
+  width: 100px;
 }
 .recommendations #news div span {
   display: block;
+}
+.recommendations #news div span:nth-child(2) {
+  margin-top: -1.2em;
+}
+.slider {
+  color: #00632e;
+  background-color: #97be0c;
+  margin-top: 1em;
+  padding: 0.7em;
+  text-align: center;
+}
+.slider div {
+  display: inline-block;
+  vertical-align: middle;
+}
+.slider div:nth-child(2) {
+  margin: 0 0.4em;
+}
+.slider div:nth-child(2) p {
+  line-height: 0.9em;
+}
+.slider div:nth-child(3) {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.slider img {
+  vertical-align: middle;
 }
