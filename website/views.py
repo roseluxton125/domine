@@ -7,3 +7,7 @@ def index(request):
 
 def school(request):
 	return render(request, 'escuela.html')
+
+
+def ppg(request):
+	return render(request, 'ppg.html')

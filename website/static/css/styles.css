@@ -110,6 +110,15 @@ nav {
 .two-col .portrait + p {
   font-style: italic;
 }
+.training .title {
+  font-size: 4em;
+}
+.training article:nth-child(2) p:nth-child(1) {
+  font-style: italic;
+}
+.training article:nth-child(2) p:nth-child(2) {
+  font-weight: bold;
+}
 body {
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
@@ -121,7 +130,12 @@ body {
 a {
   text-decoration: none;
 }
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 p {
@@ -309,7 +323,7 @@ nav ul li:hover ul {
   width: 40%;
 }
 .two-col .logo {
-  margin: 0 0 1em 0;
+  margin-bottom: 1em;
 }
 .two-col .logo span {
   color: #00632e;
@@ -330,4 +344,41 @@ nav ul li:hover ul {
 }
 .two-col:nth-child(2) {
   text-align: center;
+}
+.training .copy {
+  color: #6f7072;
+  margin: -0.4em 0 0.8em 0;
+}
+.training .title,
+.training .subtitle {
+  color: #00632e;
+}
+.training .subtitle {
+  margin: 1em 0 0.5em 0;
+}
+.training article {
+  margin-top: 3em;
+}
+.training article:nth-child(1) {
+  margin: 0;
+}
+.training article:nth-child(2) p:nth-child(1) {
+  color: #6f7072;
+}
+.training article:nth-child(2) p:nth-child(2) {
+  margin-top: 1em;
+}
+.training article:nth-child(2) p:nth-child(2) span {
+  display: block;
+}
+.training article:nth-child(2) p:nth-child(3) {
+  margin-top: 1.5em;
+  text-align: center;
+}
+.training article:nth-child(2) p:nth-child(3) img:nth-child(2) {
+  margin-left: -3em;
+}
+.training li {
+  list-style-type: square;
+  list-style-position: inside;
 }

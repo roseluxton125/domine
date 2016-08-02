@@ -1,15 +1,17 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 
 {% block content %}
+<section class="content training ppg">
 	<article>
-		<h2>PPG</h2>
-		<h3>Método de Reequilibrio y Reeducación Postural</h3>
+		<h2 class="title">PPG</h2>
+		<h3 class="copy">Método de Reequilibrio y Reeducación Postural</h3>
 		<ul>
 			<li>Las clases se realizan sobre el reformer, (se pueden realizar trabajos en piso o pared si el espacio físico lo permite)</li>
 			<li>Se puede utilizar el método como una especialización y aplicarlo en clases convencionales de pilates donde haya alumnos con dicha necesidad.</li>
 			<li>Se trasladan al reformer, entre otros, los ejercicios provenientes de métodos SOUCHARD.</li>
 		</ul>
-		<h3>OBJETIVOS</h3>
+		<h3 class="subtitle">OBJETIVOS</h3>
 		<ul>
 			<li>Aumentar la movilidad articular.</li>
 			<li>Devolver al cuerpo su funcionalidad y eficacia a través del tratamiento de las Cadenas Musculares Tónicas (Posturales) y Fasciales.</li>
@@ -26,6 +28,10 @@
 			<span>¿En qué se fundamentan los “Estiramientos globales”?</span>
 			<span>¿Qué son las Cadenas Musculares?</span>
 			<span>¿Qué consecuencias derivan de un exceso de tensiones y acortamientos musculares?</span>
+		</p>
+		<p>
+			<img src="{% static "img/camilla_1.png" %}" alt="Trabajos en camilla de pilates">
+			<img src="{% static "img/camilla_2.png" %}" alt="Trabajos en camilla de pilates">
 		</p>
 	</article>
 	<article>
@@ -45,4 +51,5 @@
 		<h3>¿Qué consecuencias derivan de un exceso de tensiones y acortamientos musculares?</h3>
 		<p>Cualquier problema que pueda surgir debido a una lesión, a un exceso de tensiones musculares crónicas, a acortamientos musculares, etc. que afecte a algún componente de este "equipo" (una o más zonas de la cadena muscular), dará lugar invitablemente a una pérdida de eficacia en la función a realizar (limitación funcional) y que, tarde o temprano, desembocará en molestias, dolores músculo-articulares, inflamaciones y rigideces, que podrán aparecer en cualquier lugar de la cadena muscular afectada, incluso, muchas veces en zonas lejanas (efectos) a las del problema inicial (causa). Todo ello conllevará en un principio a alteraciones de la postura (hiperlordosis, hipercifosis, rectificaciones o inversiones de las curvaturas fisiológicas, valgus o varo de rodillas, recurvatum de rodillas, pies cavos, pies planos, juanetes, etc.) que, "acompañadas" de un estilo de vida poco saludable y de hábitos incorrectos (falta de movimiento, posiciones sentadas por mucho tiempo durante el día, gesto repetitivo de la vida laboral y deportiva, exceso de actividad física, stress elevado, mala alimentación, etc.) predispondrá el cuerpo a ser víctimas de las clásicas patologías músculo-articulares: dolores de espalda, lumbalgias, cervicalgias, cervicobraquilágias, hernias discales, protusiones discales, artrosis de cadera, artrosis de columna, atrosis de rodilla, epicondilitis, túnel carpiano, fasciis plantar, trocanterítis, etc.</p>
 	</article>
+</section>
 {% endblock %}

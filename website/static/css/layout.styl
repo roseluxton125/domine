@@ -10,7 +10,7 @@ body
 a
 	text-decoration none
 
-h1
+h1, h2, h3, h4, h5, h6
 	margin 0
 
 p
@@ -182,6 +182,7 @@ nav
 	margin-top 1.5em
 	padding 2em
 
+
 /* ==== ESCUELA ====================== */
 
 .two-col
@@ -190,7 +191,7 @@ nav
 	vertical-align middle
 	width 40%
 	.logo
-		margin 0 0 1em 0
+		margin-bottom 1em
 		span
 			color green-dark
 			display block
@@ -205,3 +206,35 @@ nav
 				display block
 	&:nth-child(2)
 		text-align center
+
+
+/* ==== CAPACITACIONES ====================== */
+
+.training
+	.copy
+		color grey
+		margin -.4em 0 .8em 0
+	.title, .subtitle
+		color green-dark
+	.subtitle
+		margin 1em 0 .5em 0
+	article
+		margin-top 3em
+		&:nth-child(1)
+			margin 0
+		&:nth-child(2)
+			p
+				&:nth-child(1)
+					color grey
+				&:nth-child(2)
+					margin-top 1em
+					span
+						display block
+				&:nth-child(3)
+					margin-top 1.5em
+					text-align center
+					img:nth-child(2)
+						margin-left -3em
+	li
+		list-style-type square
+		list-style-position inside
