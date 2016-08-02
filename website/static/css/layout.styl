@@ -73,10 +73,37 @@ nav
 			display inline-block
 			text-align center
 			width (100% / 6)
+			position relative
 			//Fix line-height
 			margin-top .5em
 			a
 				color white
+			//Submenu
+			ul
+				display none
+				position absolute
+				left 0
+				top 100%
+				li
+					display block
+					margin 0
+					text-align left
+					width 120%
+					a
+						display block
+						//Fix line-height with margin-top grater than margin-bottom
+						padding 5% 5% 2% 5%
+					&:nth-child(1)
+						background-color green-nav-1
+					&:nth-child(2)
+						background-color green-nav-2
+					&:nth-child(3)
+						background-color green-nav-3
+					&:nth-child(4)
+						background-color green-nav-4
+			&:hover
+				ul
+					display block
 
 
 /* ==== CONTENT ====================== */
@@ -130,8 +157,8 @@ nav
 					margin-top -1.2em
 
 .slider
-	color green-dark
 	background-color green-light
+	color green-dark
 	margin-top 1em
 	padding .7em
 	text-align center
@@ -147,3 +174,34 @@ nav
 	img
 		//Fix img inline
 		vertical-align middle
+
+
+/* ==== CONTENT ====================== */
+
+.content
+	margin-top 1.5em
+	padding 2em
+
+/* ==== ESCUELA ====================== */
+
+.two-col
+	display inline-block
+	padding 0 5%
+	vertical-align middle
+	width 40%
+	.logo
+		margin 0 0 1em 0
+		span
+			color green-dark
+			display block
+			text-align center
+	.name
+		display block
+	.portrait
+		border-radius 50%
+		& + p
+			margin-top 1em
+			span:nth-child(1)
+				display block
+	&:nth-child(2)
+		text-align center

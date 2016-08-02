@@ -101,6 +101,15 @@ nav {
 .slider div:nth-child(2) p:nth-child(2) {
   font-size: 1.33em;
 }
+.two-col .logo {
+  font-size: 2.5em;
+}
+.two-col .name {
+  font-weight: bold;
+}
+.two-col .portrait + p {
+  font-style: italic;
+}
 body {
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
@@ -175,10 +184,42 @@ nav ul li {
   display: inline-block;
   text-align: center;
   width: 16.666666666666668%;
+  position: relative;
   margin-top: 0.5em;
 }
 nav ul li a {
   color: #fff;
+}
+nav ul li ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+nav ul li ul li {
+  display: block;
+  margin: 0;
+  text-align: left;
+  width: 120%;
+}
+nav ul li ul li a {
+  display: block;
+  padding: 5% 5% 2% 5%;
+}
+nav ul li ul li:nth-child(1) {
+  background-color: #275d24;
+}
+nav ul li ul li:nth-child(2) {
+  background-color: rgba(39,93,36,0.9);
+}
+nav ul li ul li:nth-child(3) {
+  background-color: rgba(39,93,36,0.8);
+}
+nav ul li ul li:nth-child(4) {
+  background-color: rgba(39,93,36,0.6);
+}
+nav ul li:hover ul {
+  display: block;
 }
 .content {
   background-color: rgba(245,245,246,0.8);
@@ -234,8 +275,8 @@ nav ul li a {
   margin-top: -1.2em;
 }
 .slider {
-  color: #00632e;
   background-color: #97be0c;
+  color: #00632e;
   margin-top: 1em;
   padding: 0.7em;
   text-align: center;
@@ -256,4 +297,37 @@ nav ul li a {
 }
 .slider img {
   vertical-align: middle;
+}
+.content {
+  margin-top: 1.5em;
+  padding: 2em;
+}
+.two-col {
+  display: inline-block;
+  padding: 0 5%;
+  vertical-align: middle;
+  width: 40%;
+}
+.two-col .logo {
+  margin: 0 0 1em 0;
+}
+.two-col .logo span {
+  color: #00632e;
+  display: block;
+  text-align: center;
+}
+.two-col .name {
+  display: block;
+}
+.two-col .portrait {
+  border-radius: 50%;
+}
+.two-col .portrait + p {
+  margin-top: 1em;
+}
+.two-col .portrait + p span:nth-child(1) {
+  display: block;
+}
+.two-col:nth-child(2) {
+  text-align: center;
 }
