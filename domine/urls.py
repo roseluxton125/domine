@@ -23,4 +23,8 @@ urlpatterns = [
     url(r'^$', views.index, name='home'),
     url(r'^escuela/$', views.school, name='escuela'),
     url(r'^capacitaciones/ppg/$', views.ppg, name='ppg'),
+    url(r'^capacitaciones/pactivo/$', views.pactivo, name='pactivo'),
+    url(r'^capacitaciones/kstretch/$', views.kstretch, name='kstretch'),
+    url(r'^eventos/$', views.events, name='eventos'),
+    url(r'^galeria/$', views.gallery, name='galeria'),
 ]

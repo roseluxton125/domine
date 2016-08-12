@@ -216,58 +216,65 @@ nav
 	.copy
 		color grey
 		margin -.4em 0 .8em 0
+	.blue-link
+		color blue-link
 	.title, .subtitle
 		color green-dark
 	.subtitle
 		margin 1em 0 .5em 0
 	.page
+		box-sizing border-box
+		left 0
+		min-height 550px
+		padding 2em 3em
 		position absolute
 		top 0
-		left 0
-		margin 2em 3em
 		&:not(.pageone)
 			display none
-		& .pageone
-			i
-				margin-right .2em
-		& .pagetwo
-			p
-				&:nth-child(1)
-					color grey
-				&:nth-child(2)
-					margin-top 1em
-					span
-						display block
-				&:nth-child(3)
-					margin-top 1.5em
-					text-align center
-					img
-						//Fix img inline
-						vertical-align middle
-						&:nth-child(2)
-							margin-left -3em
-		& .pagethree
-			div
-				display inline-block
-				vertical-align bottom
-				&:nth-child(2)
-					width 65%
-				&:nth-child(3)
-					border-bottom 2px solid white
-					padding-left 5%
-					img
-						//Fix img inline
-						vertical-align middle
+	& .pageone
+		i
+			margin-right .2em
+	& .pagetwo
+		p
+			&:nth-child(1)
+				color grey
+			&:nth-child(2)
+				margin-top 1em
+				span
+					display block
+			&:nth-child(3)
+				margin-top .5em
+				text-align center
+				img
+					//Fix img inline
+					vertical-align middle
+					&:nth-child(2)
+						margin-left -3em
+	& .pagethree
+		div
+			display inline-block
+			&:nth-child(2)
+				width 70%
+		h3
+			margin-bottom 1em
+		img
+			bottom 0
+			position absolute
+			right 3em
+	& .pagefour
+		div:nth-child(2)
+			display inline-block
+			width 60%
+		div:nth-child(3)
+			margin-top 3em
 			h3
-				margin-bottom 1em
-		& .pagefour
-			img
-				border-top 2px solid white
-				border-bottom 2px solid white
-				float left
-				margin 0 3% 1em 0
-			h3
-				margin 2em 0 1em 0
+				width 50%
+		h3
+			margin-bottom 1em
+		img
+			position absolute
+			right 3em
+			top 0
 	.prev-button, .next-button
 		position absolute
 		top 50%
@@ -284,6 +291,16 @@ nav
 		animation next-button-anim 1s infinite
 		right 7px
 
+.kstretch
+	.pageone
+		a, p:not(.intro), ul
+			width 60%
+		img
+			bottom 2em
+			position absolute
+			right 3em
+
+
 @keyframes next-button-anim
 	{0%}
 		transform translate(2px, 0)
@@ -299,3 +316,59 @@ nav
 		transform translate(2px, 0)
 	{100%}
 		transform translate(-2px, 0)
+
+
+/* ==== EVENTOS ====================== */
+
+.events
+	h2
+		color green-dark
+		span
+			color grey
+	h3
+		color grey
+		margin-bottom 1em
+
+
+/* ==== EVENTOS ====================== */
+
+.gallery
+	text-align center
+	ul
+		column-count 4
+		column-gap 0
+	li
+		overflow hidden
+		position relative
+		figure
+			margin 0
+			a
+				display block
+				img
+					transition all .2s ease-in-out
+					max-width 310px
+					width 296px
+					//Fix img inline
+					vertical-align middle
+					//Fix blink behavior on hover
+					transform translateZ(0)
+				&:after
+					background #FFF
+					bottom 0
+					content ''
+					left 0
+					opacity 0
+					position absolute
+					right 0
+					top 0
+					transition all .3s ease-in-out
+					z-index 1
+		&:hover
+			img
+				transform scale(1.1)
+			a:after
+				opacity .7
+	.single
+		height 198px
+	.double
+		height 396px

@@ -1,22 +1,28 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 
 {% block content %}
-	<article>
-		<h2>K-STRETCH</h2>
-		<h3>Método de Reequilibrio y Reeducación Postural</h3>
-		<p>El Método K-Stretch® es un método de Reequilibrio y Reeducación Postural que respeta principios fundamentales de métodos posturales de origen mézièrista y tiene como objetivo principal, devolver al cuerpo su funcionalidad y eficacia a través del tratamiento de las Cadenas Musculares Tónicas (Posturales) y Fasciales.</p>
-		<h3>BENEFICIOS</h3>
+<section class="content training kstretch">
+	<article class="page pageone active">
+		<h2 class="title">K-STRETCH</h2>
+		<h3 class="copy">Método de Reequilibrio y Reeducación Postural</h3>
+		<p class="intro">El Método K-Stretch® es un método de Reequilibrio y Reeducación Postural que respeta principios fundamentales de métodos posturales de origen mézièrista y tiene como objetivo principal, devolver al cuerpo su funcionalidad y eficacia a través del tratamiento de las Cadenas Musculares Tónicas (Posturales) y Fasciales.</p>
+		<h3 class="subtitle">BENEFICIOS</h3>
 		<ul>
-			<li>Reequilibra las tensiones musculares</li>
-			<li>Mejora la postura</li>
-			<li>Mejora la elasticidad muscular</li>
-			<li>Mejora la movilidad articular</li>
-			<li>Mejora la circulación venosa</li>
-			<li>Mejora la condición física en general</li>
-			<li>Mejora el rendimiento deportivo y la recuperación</li>
-			<li>Actúa positivamente sobre los dolores de espalda, de cuello, de hombro, de brazo, piernas pesadas...</li>
+			<li><i class="fa fa-caret-right" aria-hidden="true"></i> Reequilibra las tensiones musculares</li>
+			<li><i class="fa fa-caret-right" aria-hidden="true"></i> Mejora la postura</li>
+			<li><i class="fa fa-caret-right" aria-hidden="true"></i> Mejora la elasticidad muscular</li>
+			<li><i class="fa fa-caret-right" aria-hidden="true"></i> Mejora la movilidad articular</li>
+			<li><i class="fa fa-caret-right" aria-hidden="true"></i> Mejora la circulación venosa</li>
+			<li><i class="fa fa-caret-right" aria-hidden="true"></i> Mejora la condición física en general</li>
+			<li><i class="fa fa-caret-right" aria-hidden="true"></i> Mejora el rendimiento deportivo y la recuperación</li>
+			<li><i class="fa fa-caret-right" aria-hidden="true"></i> Actúa positivamente sobre los dolores de espalda, de cuello, de hombro, de brazo, piernas pesadas...</li>
 		</ul>
+		<br>
 		<p>El Método K-Stretch® actúa positivamente sobre las deformaciones de la columna y previene problemáticas músculo-articulares de origen mecánico.</p>
-		<a href="http://www.k-stretch.com/es/k-stretch.html">http://www.k-stretch.com/es/k-stretch.html</a>
+		<br>
+		<a href="http://www.k-stretch.com/es/k-stretch.html" class="blue-link">http://www.k-stretch.com/es/k-stretch.html</a>
+		<img src="{% static "img/hamaca.png" %}" alt="Metodo K-Stretch">
 	</article>
+</section>
 {% endblock %}

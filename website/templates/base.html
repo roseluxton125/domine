@@ -10,6 +10,7 @@
 	<script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
 	<script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
 	<script src="{% static "js/js.js" %}"></script>
+	{% block head %}{% endblock %}
 </head>
 <body>
 	<div id="top-content">
@@ -39,13 +40,13 @@
 							<a href="#">CAPACITACIONES</a>
 							<ul>
 								<li><a href="/capacitaciones/ppg/">PPG</a></li>
-								<li><a href="#">PILATES ACTIVO</a></li>
-								<li><a href="#">K-STRETCH</a></li>
+								<li><a href="/capacitaciones/pactivo/">PILATES ACTIVO</a></li>
+								<li><a href="/capacitaciones/kstretch/">K-STRETCH</a></li>
 								<li><a href="#">PROFESIONALES CERTIFICADOS</a></li>
 							</ul>
 						</li><!--
-					--><li><a href="#">EVENTOS</a></li><!--
-					--><li><a href="#">GALERIA</a></li><!--
+					--><li><a href="/eventos/">EVENTOS</a></li><!--
+					--><li><a href="/galeria/">GALERIA</a></li><!--
 					--><li><a href="#">CONTACTO</a></li>
 				</ul>
 			</nav>
@@ -78,5 +79,6 @@
 			--><div><img src="{% static "img/arrow.png" %}" alt=""></div>
 		</div>
 	</footer>
+	{% block closescripts %}{% endblock %}
 </body>
 </html>
