@@ -157,20 +157,33 @@ nav
 	background-color green-light
 	color green-dark
 	margin-top 1em
-	padding .7em
+	padding 1em
 	text-align center
-	div
+	div, ul
 		display inline-block
+		position relative
 		vertical-align middle
-		&:nth-child(2)
-			margin 0 .4em
-			p
-				line-height .9em
-		&:nth-child(3)
-			transform rotate(180deg)
 	img
 		//Fix img inline
 		vertical-align middle
+	.right-arrow
+		transform rotate(180deg)
+	.slides
+		margin 0 .4em
+		width 560px
+		li
+			position absolute
+			text-align center
+			transform translateY(-50%) !important
+			width 100%
+			&.hideable
+				display none
+			&.active
+				display block
+			&.whitestyle
+				color white
+			p
+				line-height .8em
 
 
 /* ==== CONTENT ====================== */
@@ -352,6 +365,7 @@ nav
 					vertical-align middle
 					//Fix blink behavior on hover
 					transform translateZ(0)
+					transform translate3d(0,0,0)
 				&:after
 					background #FFF
 					bottom 0
@@ -365,10 +379,59 @@ nav
 					z-index 1
 		&:hover
 			img
-				transform scale(1.1)
+				// transform scale(1.1)
+				width 100%
 			a:after
 				opacity .7
 	.single
 		height 198px
 	.double
 		height 396px
+
+
+/* ==== CONTACTO ====================== */
+
+.contact
+	form
+		width 50%
+		label, input:not([type=submit]), textarea
+			display block
+		input:not([type=submit]), textarea
+			background-color transparent
+			border 1px solid grey-bkg
+			border-radius 4px
+			box-shadow 1px 0px 1px rgba(0,0,0,.5)
+			color green-dark
+			margin .3em 0 1.5em 0
+			outline none
+			padding .5em
+			width 100%
+		input[type=submit]
+			background green-dark
+			border-radius 3px
+			border 0
+			box-shadow inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 2px 0px green-light-bkg, inset 0 -1px 0 rgba(255, 255, 255, 0.15), 0 5px 5px 1px rgba(0, 0, 0, 0.5)
+			-moz-box-shadow inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 2px 0px green-light-bkg, inset 0 -1px 0 rgba(255, 255, 255, 0.15), 0 5px 5px 1px rgba(0, 0, 0, 0.5)
+			-ms-box-shadow inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 2px 0px green-light-bkg, inset 0 -1px 0 rgba(255, 255, 255, 0.15), 0 5px 5px 1px rgba(0, 0, 0, 0.5)
+			-o-box-shadow inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 2px 0px green-light-bkg, inset 0 -1px 0 rgba(255, 255, 255, 0.15), 0 5px 5px 1px rgba(0, 0, 0, 0.5)
+			-webkit-box-shadow inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 2px 0px green-light-bkg, inset 0 -1px 0 rgba(255, 255, 255, 0.15), 0 5px 5px 1px rgba(0, 0, 0, 0.5)
+			color #FFF
+			cursor pointer
+			font-size 1em
+			margin-top .5em
+			padding .8em 1.2em
+			text-shadow 0 1px 4px #000
+			transition background 0.3s ease
+			-moz-transition background 0.3s ease
+			-ms-transition background 0.3s ease
+			-o-transition background 0.3s ease
+			-webkit-transition background 0.3s ease
+		label
+			line-height 1em
+		p
+			border none
+			margin 0
+			text-align center
+	p
+		border-bottom 1px solid green-light
+		margin-bottom 2em

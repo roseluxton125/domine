@@ -155,7 +155,7 @@
     right: 23px;
     top: 23px;
     margin-top: -4px;
-    font-size: 2em;
+    font-size: 1em;
     color: #FFFFFF;
     cursor: pointer;
     -webkit-transition: all 0.3s ease-in-out;
@@ -166,6 +166,10 @@
 
 .jslghtbx-close:hover {
     text-shadow: 0 0 10px #fff;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
 }
 
 @media screen and (max-width: 1060px) {
@@ -211,10 +215,15 @@
         right: .6em;
     }
 
-    .jslghtbx-next.jslghtbx-no-img {
+    /*.jslghtbx-next.jslghtbx-no-img {
         border-top: 110px solid transparent;
         border-bottom: 110px solid transparent;
         border-left: 40px solid #FFF;
+    }*/
+    .jslghtbx-next.jslghtbx-no-img {
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-left: 10px solid #FFF;
     }
 }
 
@@ -248,10 +257,15 @@
         left: .6em;
     }
 
-    .jslghtbx-prev.jslghtbx-no-img {
+    /*.jslghtbx-prev.jslghtbx-no-img {
         border-top: 110px solid transparent;
         border-bottom: 110px solid transparent;
         border-right: 40px solid #FFF;
+    }*/
+    .jslghtbx-prev.jslghtbx-no-img {
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-right: 10px solid #FFF;
     }
 }
 

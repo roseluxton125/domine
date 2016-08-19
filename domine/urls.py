@@ -27,4 +27,5 @@ urlpatterns = [
     url(r'^capacitaciones/kstretch/$', views.kstretch, name='kstretch'),
     url(r'^eventos/$', views.events, name='eventos'),
     url(r'^galeria/$', views.gallery, name='galeria'),
+    url(r'^contacto/$', views.ContactFormView.as_view(), name='contacto'),
 ]

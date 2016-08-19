@@ -95,10 +95,15 @@ nav
 .slider
 	font-family 'Calibri'
 	font-size 3.5em
-	div
-		&:nth-child(2)
-			p:nth-child(2)
+	li
+		&.greenstyle
+			p:last-child
 				font-size 1.33em
+		&.whitestyle
+			p
+				font-style italic
+				&:last-child
+					font-weight bold
 
 .two-col
 	.logo
@@ -129,3 +134,10 @@ nav
 		font-size 2.2em
 		span
 			font-size .6em
+
+
+.contact
+	input, textarea
+		font-size 1.1em
+	label
+		font-size 1.5em

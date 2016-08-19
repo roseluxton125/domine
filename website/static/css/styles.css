@@ -98,8 +98,14 @@ nav {
   font-family: 'Calibri';
   font-size: 3.5em;
 }
-.slider div:nth-child(2) p:nth-child(2) {
+.slider li.greenstyle p:last-child {
   font-size: 1.33em;
+}
+.slider li.whitestyle p {
+  font-style: italic;
+}
+.slider li.whitestyle p:last-child {
+  font-weight: bold;
 }
 .two-col .logo {
   font-size: 2.5em;
@@ -127,6 +133,13 @@ nav {
 }
 .events h2 span {
   font-size: 0.6em;
+}
+.contact input,
+.contact textarea {
+  font-size: 1.1em;
+}
+.contact label {
+  font-size: 1.5em;
 }
 body {
   background-image: url("../img/background.jpg");
@@ -301,25 +314,44 @@ nav ul li:hover ul {
   background-color: #97be0c;
   color: #00632e;
   margin-top: 1em;
-  padding: 0.7em;
+  padding: 1em;
   text-align: center;
 }
-.slider div {
+.slider div,
+.slider ul {
   display: inline-block;
+  position: relative;
   vertical-align: middle;
-}
-.slider div:nth-child(2) {
-  margin: 0 0.4em;
-}
-.slider div:nth-child(2) p {
-  line-height: 0.9em;
-}
-.slider div:nth-child(3) {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
 }
 .slider img {
   vertical-align: middle;
+}
+.slider .right-arrow {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.slider .slides {
+  margin: 0 0.4em;
+  width: 560px;
+}
+.slider .slides li {
+  position: absolute;
+  text-align: center;
+  -webkit-transform: translateY(-50%) !important;
+          transform: translateY(-50%) !important;
+  width: 100%;
+}
+.slider .slides li.hideable {
+  display: none;
+}
+.slider .slides li.active {
+  display: block;
+}
+.slider .slides li.whitestyle {
+  color: #fff;
+}
+.slider .slides li p {
+  line-height: 0.8em;
 }
 .content {
   background-color: rgba(245,245,246,0.8);
@@ -513,6 +545,8 @@ nav ul li:hover ul {
   vertical-align: middle;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 .gallery li figure a:after {
   background: #fff;
@@ -528,8 +562,7 @@ nav ul li:hover ul {
   z-index: 1;
 }
 .gallery li:hover img {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  width: 100%;
 }
 .gallery li:hover a:after {
   opacity: 0.7;
@@ -539,6 +572,59 @@ nav ul li:hover ul {
 }
 .gallery .double {
   height: 396px;
+}
+.contact form {
+  width: 50%;
+}
+.contact form label,
+.contact form input:not([type=submit]),
+.contact form textarea {
+  display: block;
+}
+.contact form input:not([type=submit]),
+.contact form textarea {
+  background-color: transparent;
+  border: 1px solid rgba(217,218,219,0.8);
+  border-radius: 4px;
+  box-shadow: 1px 0px 1px rgba(0,0,0,0.5);
+  color: #00632e;
+  margin: 0.3em 0 1.5em 0;
+  outline: none;
+  padding: 0.5em;
+  width: 100%;
+}
+.contact form input[type=submit] {
+  background: #00632e;
+  border-radius: 3px;
+  border: 0;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 2px 0px rgba(151,190,12,0.8), inset 0 -1px 0 rgba(255,255,255,0.15), 0 5px 5px 1px rgba(0,0,0,0.5);
+  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 2px 0px rgba(151,190,12,0.8), inset 0 -1px 0 rgba(255,255,255,0.15), 0 5px 5px 1px rgba(0,0,0,0.5);
+  -ms-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 2px 0px rgba(151,190,12,0.8), inset 0 -1px 0 rgba(255,255,255,0.15), 0 5px 5px 1px rgba(0,0,0,0.5);
+  -o-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 2px 0px rgba(151,190,12,0.8), inset 0 -1px 0 rgba(255,255,255,0.15), 0 5px 5px 1px rgba(0,0,0,0.5);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 2px 0px rgba(151,190,12,0.8), inset 0 -1px 0 rgba(255,255,255,0.15), 0 5px 5px 1px rgba(0,0,0,0.5);
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 0.5em;
+  padding: 0.8em 1.2em;
+  text-shadow: 0 1px 4px #000;
+  transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  -ms-transition: background 0.3s ease;
+  -o-transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease;
+}
+.contact form label {
+  line-height: 1em;
+}
+.contact form p {
+  border: none;
+  margin: 0;
+  text-align: center;
+}
+.contact p {
+  border-bottom: 1px solid #97be0c;
+  margin-bottom: 2em;
 }
 @-webkit-keyframes next-button-anim {
   0% {

@@ -9,7 +9,6 @@
 	<link rel="stylesheet" href="{% static "css/font-awesome-4.6.3/css/font-awesome.min.css" %}">
 	<script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
 	<script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
-	<script src="{% static "js/js.js" %}"></script>
 	{% block head %}{% endblock %}
 </head>
 <body>
@@ -47,7 +46,7 @@
 						</li><!--
 					--><li><a href="/eventos/">EVENTOS</a></li><!--
 					--><li><a href="/galeria/">GALERIA</a></li><!--
-					--><li><a href="#">CONTACTO</a></li>
+					--><li><a href="/contacto/">CONTACTO</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -61,8 +60,7 @@
 			</div>
 		</div><!--
 		--><div id="messages">
-			<p>la gente demanda tomar éstas clases</p>
-			<p>Excelente resultado</p>
+			{% block messages %}{% endblock %}
 		</div><!--
 		--><div id="logo2"><img src="{% static "img/logo2.png" %}" alt="Escuela de Formación Joahana Dominé"></div>
 	</div>
@@ -71,14 +69,34 @@
 			<p><span><span>Escuela de Formación Profesional Johana Dominé</span> - Arrecifes Pcia. de Buenos Aires</span></p>
 		</div>
 		<div class="slider">
-			<div><img src="{% static "img/arrow.png" %}" alt=""></div><!--
-			--><div>
-				<p>El Método ofrece</p>
-				<p>al PROFESOR</p>
-			</div><!--
-			--><div><img src="{% static "img/arrow.png" %}" alt=""></div>
+			<div class="left-arrow"><img src="{% static "img/arrow.png" %}" alt=""></div><!--
+			--><ul class="slides">
+					<li id="1" class="hideable greenstyle active">
+						<p>El Método ofrece</p>
+						<p>al PROFESOR</p>
+					</li>
+					<li id="2" class="hideable whitestyle">
+						<p>implementar el método</p>
+						<p>con su espacio</p>
+					</li>
+					<li id="3" class="hideable whitestyle">
+						<p>Seriedad y Calidad</p>
+						<p>en las clases</p>
+					</li>
+					<li id="4" class="hideable whitestyle">
+						<p>No es necesario</p>
+						<p>el uso de elementos</p>
+						<p>sólo el Reformer</p>
+					</li>
+					<li id="5" class="hideable whitestyle">
+						<p>Innovación</p>
+						<p>Excelente resultado</p>
+					</li>
+				</ul><!--
+			--><div class="right-arrow"><img src="{% static "img/arrow.png" %}" alt=""></div>
 		</div>
 	</footer>
+	<script src="{% static "js/js.js" %}" type="text/javascript"></script>
 	{% block closescripts %}{% endblock %}
 </body>
 </html>
