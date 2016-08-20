@@ -38,3 +38,6 @@ class ContactFormView(FormView):
 		
 		send_mail('Mensaje de escuelajohanadomine.com',message,'email@email.com',['email@email.com'])
 		return super(ContactFormView, self).form_valid(form)
+
+def centroEntrenamiento(request):
+	return render(request, 'centro.html')

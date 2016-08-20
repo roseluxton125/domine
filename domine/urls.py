@@ -28,4 +28,5 @@ urlpatterns = [
     url(r'^eventos/$', views.events, name='eventos'),
     url(r'^galeria/$', views.gallery, name='galeria'),
     url(r'^contacto/$', views.ContactFormView.as_view(), name='contacto'),
+    url(r'^centro-entrenamiento/$', views.centroEntrenamiento, name='centro'),
 ]

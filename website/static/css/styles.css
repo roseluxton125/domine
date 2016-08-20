@@ -58,12 +58,16 @@ nav {
 #top-content {
   font-family: 'Garamond';
 }
-#top-content div:nth-child(2) {
+#top-content .center-big {
   font-size: 2em;
-  line-height: 0.7em;
+  line-height: 0.5em;
 }
-#top-content div:nth-child(2) p:nth-child(2) {
-  font-size: 0.8em;
+#top-content .center-small {
+  font-size: 1.6em;
+}
+#top-content h1 {
+  font-weight: normal;
+  line-height: 0px;
 }
 .logo {
   font-family: 'Garamond';
@@ -141,15 +145,32 @@ nav {
 .contact label {
   font-size: 1.5em;
 }
+.centro-entrenamiento #about {
+  font-size: 1.2em;
+}
+.centro-entrenamiento #about span {
+  font-weight: bold;
+}
+.centro-entrenamiento .bottom-content p {
+  font-weight: bold;
+}
+.centro-entrenamiento .bottom-content p:nth-child(1) {
+  font-size: 7em;
+}
+.centro-entrenamiento .bottom-content p:nth-child(2) {
+  font-size: 2.5em;
+}
 body {
-  background-image: url("../img/background.jpg");
-  background-repeat: no-repeat;
-  background-position: 50% 40%;
-  background-size: 240% auto;
   margin: 0;
   max-width: 1280px;
   min-width: 320px;
   padding: 0;
+}
+body:not(.centro-entrenamiento) {
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 40%;
+  background-size: 240% auto;
 }
 a {
   text-decoration: none;
@@ -184,9 +205,14 @@ ul li {
   display: inline-block;
 }
 #top-content div:nth-child(2) {
-  color: #97be0c;
   float: right;
   text-align: center;
+}
+#top-content div:nth-child(2) a {
+  color: #97be0c;
+}
+#top-content h1 {
+  color: #f29500;
 }
 #top-content img {
   vertical-align: middle;
@@ -625,6 +651,46 @@ nav ul li:hover ul {
 .contact p {
   border-bottom: 1px solid #97be0c;
   margin-bottom: 2em;
+}
+.centro-entrenamiento #about {
+  background-color: #37a962;
+  margin-top: 1.5em;
+  padding: 3em 0;
+}
+.centro-entrenamiento #about p {
+  color: #fff;
+}
+.centro-entrenamiento #about span {
+  border: none;
+}
+.centro-entrenamiento .bottom-content {
+  color: #fff;
+  margin-top: 2em;
+  text-align: center;
+}
+.centro-entrenamiento .bottom-content p:nth-child(1) {
+  background-color: #f29500;
+  line-height: 0.8em;
+  padding-top: 0.3em;
+}
+.centro-entrenamiento .bottom-content p:nth-child(2) span {
+  display: inline-block;
+  line-height: 1.5em;
+  padding-top: 0.3em;
+}
+.centro-entrenamiento .bottom-content p:nth-child(2) span:nth-child(1) {
+  background-color: #67b042;
+  width: 35%;
+}
+.centro-entrenamiento .bottom-content p:nth-child(2) span:nth-child(2) {
+  background-color: #37a962;
+  width: 65%;
+}
+.centro-entrenamiento .center-green-img {
+  border-bottom: 8px solid #f29500;
+}
+.centro-entrenamiento img {
+  vertical-align: middle;
 }
 @-webkit-keyframes next-button-anim {
   0% {

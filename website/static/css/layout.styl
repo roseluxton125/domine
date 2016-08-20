@@ -1,13 +1,14 @@
 body
-	background-image url('../img/background.jpg')
-	background-repeat no-repeat
-	// background-attachment fixed
-	background-position 50% 40%
-	background-size 240% auto
 	margin 0
 	max-width 1280px
 	min-width 320px
 	padding 0
+	&:not(.centro-entrenamiento)
+		background-image url('../img/background.jpg')
+		background-repeat no-repeat
+		// background-attachment fixed
+		background-position 50% 40%
+		background-size 240% auto
 
 a
 	text-decoration none
@@ -37,9 +38,12 @@ ul
 	div
 		display inline-block
 		&:nth-child(2)
-			color green-light
 			float right
 			text-align center
+			a
+				color green-light
+	h1
+		color orange
 	img
 		//Fix img inline
 		vertical-align middle
@@ -343,7 +347,7 @@ nav
 		margin-bottom 1em
 
 
-/* ==== EVENTOS ====================== */
+/* ==== GALERIA ====================== */
 
 .gallery
 	text-align center
@@ -435,3 +439,39 @@ nav
 	p
 		border-bottom 1px solid green-light
 		margin-bottom 2em
+
+
+/* ==== CENTRO DE ENTRENAMIENTO ====================== */
+
+.centro-entrenamiento
+	#about
+		background-color green-light-center
+		margin-top 1.5em
+		padding 3em 0
+		p
+			color white
+		span
+			border none
+	.bottom-content
+		color white
+		margin-top 2em
+		text-align center
+		p:nth-child(1)
+			background-color orange
+			line-height .8em
+			padding-top .3em
+		p:nth-child(2)
+			span
+				display inline-block
+				line-height 1.5em
+				padding-top .3em
+				&:nth-child(1)
+					background-color green-dark-center
+					width 35%
+				&:nth-child(2)
+					background-color green-light-center
+					width 65%
+	.center-green-img
+		border-bottom 8px solid orange
+	img
+		vertical-align middle
