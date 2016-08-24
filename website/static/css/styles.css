@@ -534,13 +534,19 @@ nav ul li:hover ul {
 }
 .events h2 {
   color: #00632e;
+  text-transform: lowercase;
+}
+.events h2:first-letter {
+  text-transform: uppercase;
 }
 .events h2 span {
   color: #6f7072;
+  text-transform: capitalize;
 }
 .events h3 {
   color: #6f7072;
   margin-bottom: 1em;
+  text-transform: uppercase;
 }
 .gallery {
   text-align: center;

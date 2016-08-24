@@ -1,5 +1,6 @@
 from django.views.generic.edit import FormView
 from website.forms import ContactForm
+from models import Evento
 from django.core.mail import send_mail
 from django.shortcuts import render
 
@@ -20,7 +21,8 @@ def kstretch(request):
 	return render(request, 'kstretch.html')
 
 def events(request):
-	return render(request, 'eventos.html')
+	eventos = Evento.objects.all()
+	return render(request, 'eventos.html',{'eventos':eventos})
 
 def gallery(request):
 	return render(request, 'galeria.html')

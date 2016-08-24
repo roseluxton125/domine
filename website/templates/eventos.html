@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
-{% load staticfiles %}
 
 {% block content %}
 <section class="content events">
-	<article>
-		<h2>España <span>Julio 2016</span></h2>
-		<h3>CAPACITACIÓN INTERNACIONAL MÉTODO POSTURAL "K-STRETCH"</h3>
-		<img src="{% static "img/eventos.jpg" %}" alt="Capacitación Internacional Método Postural K-Stretch">
-	</article>
+	{% for evento in eventos %}
+		<article>
+			<h2>{{evento.location}} <span>{{evento.date | date:"F Y"}}</span></h2>
+			<h3>{{evento.title}}</h3>
+			<img src="/media/{{evento.img}}" alt="{{evento.title}}">
+		</article>
+	{% endfor %}
 </section>
 {% endblock %}
