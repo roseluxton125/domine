@@ -5,6 +5,7 @@ document.onreadystatechange = function () {
 	// check the value - if it's 'interactive' then the DOM has loaded
 	if(document.readyState === 'interactive') {
 
+		/*####### SLIDES PPG ACTIVO #######*/
 		var next = document.getElementById('next');
 		if(next) {
 			next.addEventListener('click', function(e){
@@ -65,25 +66,9 @@ document.onreadystatechange = function () {
 				}
 			});
 		}
+		/*#######################################*/
 
-		function hasClass(elem, className) {
-			return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
-		}
-
-		function toggleClass(elem, className) {
-			var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ' ) + ' ';
-			if (hasClass(elem, className)) {
-				while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
-					newClass = newClass.replace( ' ' + className + ' ' , ' ' );
-				}
-				elem.className = newClass.replace(/^\s+|\s+$/g, '');
-			} else {
-				elem.className += ' ' + className;
-			}
-		}
-
-
-
+		/*####### SLIDER DE FRASES FOOTER #######*/
 		var interval = 4500; // You can change this value to your desired speed. The value is in milliseconds, so if you want to advance a slide every 5 seconds, set this to 5000.
 		var switching = setInterval(toggleSlide, interval);
 		function toggleSlide() {
@@ -111,6 +96,37 @@ document.onreadystatechange = function () {
 		function nextslide(num, arrayLength) {
 			if(num == arrayLength-1) return 0;
 			else return num+1;
+		}
+		/*#######################################*/
+
+
+
+		var burguer = document.getElementsByClassName('burguer')[0];
+		burguer.addEventListener('click', function(e){
+			e.preventDefault();
+			Velocity(document.querySelectorAll('nav > ul')[0], 'transition.slideRightIn', {stagger: 50});
+		});
+
+
+
+
+
+
+
+		function hasClass(elem, className) {
+			return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+		}
+
+		function toggleClass(elem, className) {
+			var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ' ) + ' ';
+			if (hasClass(elem, className)) {
+				while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+					newClass = newClass.replace( ' ' + className + ' ' , ' ' );
+				}
+				elem.className = newClass.replace(/^\s+|\s+$/g, '');
+			} else {
+				elem.className += ' ' + className;
+			}
 		}
 
 

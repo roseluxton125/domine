@@ -63,6 +63,12 @@ body {
 nav {
   font-weight: bold;
 }
+nav .burguer .burguer-icon {
+  font-size: 1.5em;
+}
+nav .burguer span {
+  font-weight: normal;
+}
 #about span > span {
   font-weight: bold;
 }
@@ -328,16 +334,32 @@ nav {
   border-radius: 0.5em;
   margin-top: 1em;
   padding: 0.3em;
+  text-align: center;
 }
 nav .burguer {
-  color: #fff;
+  border: 1px solid #6f7072;
+  border-radius: 3px;
+  color: #6f7072;
   display: none;
+  padding: 0.4em 0.5em;
+  cursor: pointer;
+}
+nav .burguer:hover .burguer-icon {
+  color: #97be0c;
 }
 @media only screen and (max-width: 830px) {
   nav .burguer {
-    text-align: center;
-    display: block;
+    display: inline-block;
   }
+}
+nav .burguer .burguer-icon {
+  display: inline-block;
+  vertical-align: bottom;
+}
+nav .burguer span {
+  display: inline-block;
+  margin: 0 0 -2px 10px;
+  vertical-align: bottom;
 }
 nav ul {
   text-align: center;
@@ -398,6 +420,11 @@ nav ul li ul li:nth-child(4) {
 }
 nav ul li:hover ul {
   display: block;
+}
+@media only screen and (max-width: 830px) {
+  nav {
+    background-color: transparent;
+  }
 }
 #about {
   margin-top: 5em;
