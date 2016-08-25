@@ -48,6 +48,17 @@ Author URL: http://luciano.im
 }
 body {
   font-family: 'HelveticaLtStd';
+  font-size: 16px;
+}
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  body {
+    font-size: 13px;
+  }
 }
 nav {
   font-weight: bold;
@@ -201,6 +212,9 @@ ul li {
 #top-content {
   margin: 2em 0 1.2em 0;
 }
+#top-content .next-button {
+  display: none;
+}
 #top-content div {
   display: inline-block;
 }
@@ -211,16 +225,72 @@ ul li {
 #top-content div:nth-child(2) a {
   color: #97be0c;
 }
+@media only screen and (max-width: 450px) {
+  #top-content div:nth-child(2) a {
+    display: block;
+    position: relative;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #top-content div:nth-child(2) {
+    text-align: left;
+    width: 100%;
+  }
+  #top-content div:nth-child(2) .next-button {
+    -webkit-animation: next-button-anim 1s infinite;
+            animation: next-button-anim 1s infinite;
+    display: inline;
+    float: right;
+    margin-right: 0.1em;
+  }
+  #top-content div:nth-child(2) p {
+    display: inline-block;
+    line-height: 1em;
+    vertical-align: baseline;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #top-content div:nth-child(2) {
+    float: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #top-content div {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #top-content div:nth-child(1) {
+    display: none;
+  }
+}
 #top-content h1 {
   color: #f29500;
 }
 #top-content img {
   vertical-align: middle;
 }
+@media only screen and (max-width: 600px) {
+  #top-content img {
+    max-width: 293px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #top-content {
+    margin: 0;
+    padding: 0.2em 0;
+  }
+}
 .facebook {
   position: absolute;
   top: 0;
   right: 1em;
+}
+@media only screen and (max-width: 450px) {
+  .facebook {
+    display: none;
+  }
 }
 .logo {
   color: #6f7072;
@@ -228,6 +298,21 @@ ul li {
 .logo img {
   display: inline-block;
   vertical-align: bottom;
+}
+@media only screen and (max-width: 600px) {
+  .logo img {
+    width: 130px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .logo img {
+    width: 100px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .logo {
+    text-align: center;
+  }
 }
 .logo p {
   display: inline-block;
@@ -244,12 +329,40 @@ nav {
   margin-top: 1em;
   padding: 0.3em;
 }
+nav .burguer {
+  color: #fff;
+  display: none;
+}
+@media only screen and (max-width: 830px) {
+  nav .burguer {
+    text-align: center;
+    display: block;
+  }
+}
+nav ul {
+  text-align: center;
+}
 nav ul li {
   display: inline-block;
+  margin: 0 4.5%;
   text-align: center;
-  width: 16.666666666666668%;
   position: relative;
   margin-top: 0.5em;
+}
+@media only screen and (max-width: 1140px) {
+  nav ul li {
+    margin: 0.5em 4% 0 4%;
+  }
+}
+@media only screen and (max-width: 1010px) {
+  nav ul li {
+    margin: 0.5em 3% 0 3%;
+  }
+}
+@media only screen and (max-width: 830px) {
+  nav ul li {
+    display: none;
+  }
 }
 nav ul li a {
   color: #fff;
