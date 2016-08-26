@@ -123,15 +123,21 @@ nav
 		&:hover
 			.burguer-icon
 				color green-light
-		+below(830px)
-			display inline-block
+			.close-icon
+				color grey
+		.close-icon
+			color green-light
+			display none
 		.burguer-icon
 			display inline-block
+		.burguer-icon, .close-icon
 			vertical-align bottom
 		span
 			display inline-block
 			margin 0 0 -2px 10px
 			vertical-align bottom
+		+below(830px)
+			display inline-block
 	ul
 		text-align center
 		li
@@ -146,7 +152,10 @@ nav
 			+below(1010px)
 				margin .5em 3% 0 3%
 			+below(830px)
-				display none
+				border-bottom 1px dotted rgba(0,0,0,.2)
+				display block
+				margin 1em 4em
+				text-shadow 1px 1px 0px rgba(0,0,0,1)
 			a
 				color white
 			//Submenu
@@ -155,16 +164,35 @@ nav
 				position absolute
 				left 0
 				top 100%
+				+below(830px)
+					position relative
 				li
 					display block
 					margin 0
 					text-align left
-					width 120%
+					width 150%
 					z-index 999
+					+below(830px)
+						background-color transparent !important
+						// opacity .9
+						border none
+						display block
+						width auto
+					i
+						color green-light
+						display none !important
+						margin-right 2px
+						+below(830px)
+							display inline-block !important
 					a
+						color #999
 						display block
 						//Fix line-height with margin-top grater than margin-bottom
 						padding 5% 5% 2% 5%
+						+below(830px)
+							// display inline-block
+							padding 2% 0 1% 0
+							text-align center
 					&:nth-child(1)
 						background-color green-nav-1
 					&:nth-child(2)
@@ -175,7 +203,16 @@ nav
 						background-color green-nav-4
 			&:hover
 				ul
-					display block
+					+above(831px)
+						display block
+		+below(830px)
+			display none
+	&.open
+		.burguer
+			.burguer-icon
+				display none
+			.close-icon
+				display inline-block
 	+below(830px)
 		background-color transparent
 

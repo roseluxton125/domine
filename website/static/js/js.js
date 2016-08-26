@@ -100,14 +100,28 @@ document.onreadystatechange = function () {
 		/*#######################################*/
 
 
-
+		/*########### RESPONSIVE MENU ###########*/
 		var burguer = document.getElementsByClassName('burguer')[0];
 		burguer.addEventListener('click', function(e){
 			e.preventDefault();
-			Velocity(document.querySelectorAll('nav > ul')[0], 'transition.slideRightIn', {stagger: 50});
+			toggleClass(document.querySelectorAll('nav')[0], 'open');
+			if(hasClass(document.querySelectorAll('nav')[0], 'open')) {
+				Velocity(document.querySelectorAll('nav > ul')[0], 'slideDown', {stagger: 40});
+			} else {
+				Velocity(document.querySelectorAll('nav > ul')[0], 'slideUp', {stagger: 40});
+			}
 		});
-
-
+		/*####### CAPACITACIONES SUBMENU ########*/
+		var training = document.getElementsByClassName('training-subnav')[0];
+		training.addEventListener('click', function(e){
+			e.preventDefault();
+			toggleClass(document.querySelectorAll('.training-subnav > ul')[0], 'open');
+			if(hasClass(document.querySelectorAll('.training-subnav > ul')[0], 'open')) {
+				Velocity(document.querySelectorAll('.training-subnav > ul')[0], 'slideDown', {stagger: 40});
+			} else {
+				Velocity(document.querySelectorAll('.training-subnav > ul')[0], 'slideUp', {stagger: 40});
+			}
+		});
 
 
 

@@ -63,11 +63,17 @@ body {
 nav {
   font-weight: bold;
 }
-nav .burguer .burguer-icon {
+nav .burguer .burguer-icon,
+nav .burguer .close-icon {
   font-size: 1.5em;
 }
 nav .burguer span {
   font-weight: normal;
+}
+@media only screen and (max-width: 830px) {
+  nav ul ul li {
+    font-size: 0.9em;
+  }
 }
 #about span > span {
   font-weight: bold;
@@ -347,19 +353,29 @@ nav .burguer {
 nav .burguer:hover .burguer-icon {
   color: #97be0c;
 }
-@media only screen and (max-width: 830px) {
-  nav .burguer {
-    display: inline-block;
-  }
+nav .burguer:hover .close-icon {
+  color: #6f7072;
+}
+nav .burguer .close-icon {
+  color: #97be0c;
+  display: none;
 }
 nav .burguer .burguer-icon {
   display: inline-block;
+}
+nav .burguer .burguer-icon,
+nav .burguer .close-icon {
   vertical-align: bottom;
 }
 nav .burguer span {
   display: inline-block;
   margin: 0 0 -2px 10px;
   vertical-align: bottom;
+}
+@media only screen and (max-width: 830px) {
+  nav .burguer {
+    display: inline-block;
+  }
 }
 nav ul {
   text-align: center;
@@ -383,7 +399,10 @@ nav ul li {
 }
 @media only screen and (max-width: 830px) {
   nav ul li {
-    display: none;
+    border-bottom: 1px dotted rgba(0,0,0,0.2);
+    display: block;
+    margin: 1em 4em;
+    text-shadow: 1px 1px 0px #000;
   }
 }
 nav ul li a {
@@ -395,16 +414,46 @@ nav ul li ul {
   left: 0;
   top: 100%;
 }
+@media only screen and (max-width: 830px) {
+  nav ul li ul {
+    position: relative;
+  }
+}
 nav ul li ul li {
   display: block;
   margin: 0;
   text-align: left;
-  width: 120%;
+  width: 150%;
   z-index: 999;
 }
+@media only screen and (max-width: 830px) {
+  nav ul li ul li {
+    background-color: transparent !important;
+    border: none;
+    display: block;
+    width: auto;
+  }
+}
+nav ul li ul li i {
+  color: #97be0c;
+  display: none !important;
+  margin-right: 2px;
+}
+@media only screen and (max-width: 830px) {
+  nav ul li ul li i {
+    display: inline-block !important;
+  }
+}
 nav ul li ul li a {
+  color: #999;
   display: block;
   padding: 5% 5% 2% 5%;
+}
+@media only screen and (max-width: 830px) {
+  nav ul li ul li a {
+    padding: 2% 0 1% 0;
+    text-align: center;
+  }
 }
 nav ul li ul li:nth-child(1) {
   background-color: #275d24;
@@ -418,8 +467,21 @@ nav ul li ul li:nth-child(3) {
 nav ul li ul li:nth-child(4) {
   background-color: rgba(39,93,36,0.6);
 }
-nav ul li:hover ul {
-  display: block;
+@media only screen and (min-width: 831px) {
+  nav ul li:hover ul {
+    display: block;
+  }
+}
+@media only screen and (max-width: 830px) {
+  nav ul {
+    display: none;
+  }
+}
+nav.open .burguer .burguer-icon {
+  display: none;
+}
+nav.open .burguer .close-icon {
+  display: inline-block;
 }
 @media only screen and (max-width: 830px) {
   nav {

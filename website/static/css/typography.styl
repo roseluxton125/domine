@@ -62,10 +62,15 @@ body
 nav
 	font-weight bold
 	.burguer
-		.burguer-icon
+		.burguer-icon, .close-icon
 			font-size 1.5em
 		span
 			font-weight normal
+	ul
+		ul
+			li
+				+below(830px)
+					font-size .9em
 
 #about
 	span > span
