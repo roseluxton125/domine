@@ -73,7 +73,7 @@ nav
 					font-size .9em
 
 #about
-	span > span
+	.boldie
 		font-weight bold
 
 #top-content
@@ -102,6 +102,8 @@ nav
 			font-weight bold
 	#messages
 		font-size 2.2em
+		+below(700px)
+			font-size 1.8em
 	#news
 		font-family 'HelveticaLtStd'
 		font-weight bold
@@ -122,6 +124,14 @@ nav
 				font-style italic
 				&:last-child
 					font-weight bold
+	+below(900px)
+		font-size 3em
+	+below(760px)
+		font-size 2.3em
+	+below(510px)
+		font-size 1.8em
+	+below(450px)
+		font-size 1.5em
 
 .two-col
 	.logo

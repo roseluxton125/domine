@@ -174,7 +174,6 @@ nav
 					z-index 999
 					+below(830px)
 						background-color transparent !important
-						// opacity .9
 						border none
 						display block
 						width auto
@@ -185,12 +184,10 @@ nav
 						+below(830px)
 							display inline-block !important
 					a
-						color #999
 						display block
 						//Fix line-height with margin-top grater than margin-bottom
 						padding 5% 5% 2% 5%
 						+below(830px)
-							// display inline-block
 							padding 2% 0 1% 0
 							text-align center
 					&:nth-child(1)
@@ -220,11 +217,16 @@ nav
 /* ==== FOOTER ====================== */
 
 #about
-	margin-top 5em
+	margin-top 4em
 	text-align center
 	p > span
 		border-top 1px solid black
 		padding-top .5em
+	+below(640px)
+		span > span
+			display block
+		.dash
+			display none
 
 .recommendations
 	background-color green-light-bkg
@@ -235,19 +237,34 @@ nav
 		vertical-align middle
 	#logo2
 		text-align right
-		width 20%
+		width 16%
 		img
+			height auto
+			max-width 130px
 			//Fix img inline
 			vertical-align middle
+			width 100%
+		+below(830px)
+			width 20%
+		+below(500px)
+			display block
+			margin-top 1.5em
+			text-align center
+			width 100%
 	#messages
 		color white
 		text-align center
-		width 60%
+		width 68%
 		p
 			line-height 1em
+		+below(830px)
+			width 80%
+		+below(500px)
+			display block
+			width 100%
 	#news
 		text-align left
-		width 20%
+		width 16%
 		div
 			background-color white
 			border-radius .7em
@@ -260,25 +277,41 @@ nav
 				&:nth-child(2)
 					//Fix line-height
 					margin-top -1.2em
+		+below(830px)
+			display none
+	+below(830px)
+		background-image url('../img/two-quotes-left.png'), url('../img/two-quotes-right.png')
+		background-repeat no-repeat, no-repeat 
+		background-position 1% 40%, 75% 40%
+	+below(500px)
+		background-position 1% 5%, 99% 5%
+		background-size 10%, 10%
 
 .slider
 	background-color green-light
 	color green-dark
-	margin-top 1em
-	padding 1em
+	margin-top .8em
+	padding 5% 0
 	text-align center
 	div, ul
 		display inline-block
 		position relative
 		vertical-align middle
 	img
+		max-width 99px
 		//Fix img inline
 		vertical-align middle
+		width 100%
+	.left-arrow, .right-arrow
+		text-align right
+		width 15%
 	.right-arrow
 		transform rotate(180deg)
 	.slides
 		margin 0 .4em
-		width 560px
+		max-width 560px
+		// width 560px
+		width 60%
 		li
 			position absolute
 			text-align center

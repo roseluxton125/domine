@@ -104,26 +104,53 @@ document.onreadystatechange = function () {
 		var burguer = document.getElementsByClassName('burguer')[0];
 		burguer.addEventListener('click', function(e){
 			e.preventDefault();
-			toggleClass(document.querySelectorAll('nav')[0], 'open');
-			if(hasClass(document.querySelectorAll('nav')[0], 'open')) {
-				Velocity(document.querySelectorAll('nav > ul')[0], 'slideDown', {stagger: 40});
+			el = document.querySelectorAll('nav')[0];
+			toggleClass(el, 'open');
+			if(hasClass(el, 'open')) {
+				Velocity(
+					document.querySelectorAll('nav > ul')[0], 
+					'slideDown', 
+					{stagger: 40}
+				);
 			} else {
-				Velocity(document.querySelectorAll('nav > ul')[0], 'slideUp', {stagger: 40});
+				Velocity(
+					document.querySelectorAll('nav > ul')[0], 
+					'slideUp', 
+					{stagger: 40,
+					complete: function(){document.querySelectorAll('nav > ul')[0].style.removeProperty('display');}
+					}
+				);
 			}
 		});
 		/*####### CAPACITACIONES SUBMENU ########*/
 		var training = document.getElementsByClassName('training-subnav')[0];
 		training.addEventListener('click', function(e){
 			e.preventDefault();
-			toggleClass(document.querySelectorAll('.training-subnav > ul')[0], 'open');
-			if(hasClass(document.querySelectorAll('.training-subnav > ul')[0], 'open')) {
-				Velocity(document.querySelectorAll('.training-subnav > ul')[0], 'slideDown', {stagger: 40});
+			el = document.querySelectorAll('.training-subnav > ul')[0];
+			toggleClass(el, 'open');
+			if(hasClass(el, 'open')) {
+				Velocity(
+					document.querySelectorAll('.training-subnav > ul')[0], 
+					'slideDown', 
+					{stagger: 40}
+				);
 			} else {
-				Velocity(document.querySelectorAll('.training-subnav > ul')[0], 'slideUp', {stagger: 40});
+				Velocity(
+					document.querySelectorAll('.training-subnav > ul')[0], 
+					'slideUp', 
+					{stagger: 40,
+					complete: function(){document.querySelectorAll('.training-subnav > ul')[0].style.removeProperty('display');}
+					}
+				);
 			}
 		});
 
-
+		//VER SI SE PUEDE USAR PARA NO MOSTRAR EL SUBMENU CUANDO LA PANTALLA SE AGRANDA ESTANDO EL SUBMENU ABIERTO
+		// window.addEventListener("resize", function(){
+		// 	if(window.innerWidth > 830){
+		// 		document.querySelectorAll('.training-subnav > ul')[0].style.removeProperty('display');
+		// 	}
+		// });
 
 
 
