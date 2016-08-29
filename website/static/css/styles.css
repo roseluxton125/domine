@@ -193,11 +193,41 @@ nav .burguer span {
 .contact label {
   font-size: 1.5em;
 }
+@media only screen and (max-width: 1100px) {
+  .centro-entrenamiento {
+    font-size: 0.7em;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .centro-entrenamiento {
+    font-size: 0.5em;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .centro-entrenamiento {
+    font-size: 0.25em;
+  }
+}
 .centro-entrenamiento #about {
   font-size: 1.2em;
 }
 .centro-entrenamiento #about span {
   font-weight: bold;
+}
+@media only screen and (max-width: 1100px) {
+  .centro-entrenamiento #about {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .centro-entrenamiento #about {
+    font-size: 1.7em;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .centro-entrenamiento #about {
+    font-size: 2.2em;
+  }
 }
 .centro-entrenamiento .bottom-content p {
   font-weight: bold;
@@ -207,6 +237,9 @@ nav .burguer span {
 }
 .centro-entrenamiento .bottom-content p:nth-child(2) {
   font-size: 2.5em;
+}
+.centro-entrenamiento h1 {
+  padding: 0.5em 0;
 }
 body {
   margin: 0;
@@ -615,6 +648,11 @@ nav.open .burguer .close-icon {
     background-size: 10%, 10%;
   }
 }
+@media only screen and (max-width: 376px) {
+  .recommendations {
+    background-position: 1% 10%, 99% 10%;
+  }
+}
 .slider {
   background-color: #97be0c;
   color: #00632e;
@@ -671,34 +709,110 @@ nav.open .burguer .close-icon {
   margin-top: 1.5em;
   padding: 2em;
 }
-.two-col {
-  display: inline-block;
-  padding: 0 5%;
-  vertical-align: middle;
-  width: 40%;
+.school {
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 2em;
+     -moz-column-gap: 2em;
+          column-gap: 2em;
 }
-.two-col .logo {
+.school .two-col {
+  display: block;
+  vertical-align: middle;
+  -webkit-break-inside: avoid;
+  page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+          break-inside: avoid;
+}
+.school .two-col .logo {
   margin-bottom: 1em;
 }
-.two-col .logo span {
+.school .two-col .logo span {
   color: #00632e;
   display: block;
   text-align: center;
 }
-.two-col .name {
+.school .two-col .name {
   display: block;
 }
-.two-col .portrait {
+.school .two-col .portrait {
   border-radius: 50%;
 }
-.two-col .portrait + p {
+.school .two-col .portrait + p {
   margin-top: 1em;
 }
-.two-col .portrait + p span:nth-child(1) {
+.school .two-col .portrait + p span:nth-child(1) {
   display: block;
+  margin-bottom: 0.5em;
 }
-.two-col:nth-child(2) {
+.school .two-col .teacher-quote {
+  display: none;
+  margin: 0 auto;
+  margin-bottom: 2.5em;
+  width: 80%;
+}
+.school .two-col .teacher-quote img,
+.school .two-col .teacher-quote p {
+  display: inline-block;
+  vertical-align: middle;
+}
+@media only screen and (max-width: 700px) {
+  .school .two-col .teacher-quote img,
+  .school .two-col .teacher-quote p {
+    display: block;
+  }
+}
+.school .two-col .teacher-quote img {
+  margin-right: 4%;
+  max-width: 293px;
+  width: 30%;
+}
+@media only screen and (max-width: 700px) {
+  .school .two-col .teacher-quote img {
+    margin: 0 auto;
+    width: 60%;
+  }
+}
+.school .two-col .teacher-quote p {
+  border-top: 1px solid #97be0c;
+  border-bottom: 1px solid #97be0c;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1em 0;
+  width: 66%;
+}
+@media only screen and (max-width: 700px) {
+  .school .two-col .teacher-quote p {
+    margin: 1em auto 0 auto;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 910px) {
+  .school .two-col .teacher-quote {
+    display: block;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .school .two-col .teacher-quote {
+    text-align: center;
+    width: 90%;
+  }
+}
+.school .two-col:nth-child(2) {
   text-align: center;
+}
+@media only screen and (max-width: 910px) {
+  .school .two-col:nth-child(2) {
+    display: none;
+  }
+}
+@media only screen and (max-width: 910px) {
+  .school {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+  }
 }
 .training {
   box-sizing: border-box;
@@ -835,6 +949,10 @@ nav.open .burguer .close-icon {
   margin-bottom: 1em;
   text-transform: uppercase;
 }
+.events img {
+  max-width: 325px;
+  width: 100%;
+}
 .gallery {
   text-align: center;
 }
@@ -846,12 +964,36 @@ nav.open .burguer .close-icon {
      -moz-column-gap: 0;
           column-gap: 0;
 }
+@media only screen and (max-width: 984px) {
+  .gallery ul {
+    -webkit-column-count: 3;
+       -moz-column-count: 3;
+            column-count: 3;
+  }
+}
+@media only screen and (max-width: 688px) {
+  .gallery ul {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+  }
+}
+@media only screen and (max-width: 392px) {
+  .gallery ul {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+  }
+}
 .gallery li {
   overflow: hidden;
   position: relative;
 }
 .gallery li figure {
   margin: 0;
+  left: 100%;
+  margin-left: -200%;
+  position: relative;
 }
 .gallery li figure a {
   display: block;
@@ -880,9 +1022,6 @@ nav.open .burguer .close-icon {
   transition: all 0.3s ease-in-out;
   z-index: 1;
 }
-.gallery li:hover img {
-  width: 100%;
-}
 .gallery li:hover a:after {
   opacity: 0.7;
 }
@@ -894,6 +1033,11 @@ nav.open .burguer .close-icon {
 }
 .contact form {
   width: 50%;
+}
+@media only screen and (max-width: 700px) {
+  .contact form {
+    width: 100%;
+  }
 }
 .contact form label,
 .contact form input:not([type=submit]),
@@ -984,6 +1128,7 @@ nav.open .burguer .close-icon {
 }
 .centro-entrenamiento img {
   vertical-align: middle;
+  width: 100%;
 }
 @-webkit-keyframes next-button-anim {
   0% {
