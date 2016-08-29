@@ -123,9 +123,10 @@ document.onreadystatechange = function () {
 			}
 		});
 		/*####### CAPACITACIONES SUBMENU ########*/
-		var training = document.getElementsByClassName('training-subnav')[0];
+		var training = document.querySelectorAll('.training-subnav > a')[0];
 		training.addEventListener('click', function(e){
 			e.preventDefault();
+			console.log("pase por aqui");
 			el = document.querySelectorAll('.training-subnav > ul')[0];
 			toggleClass(el, 'open');
 			if(hasClass(el, 'open')) {
