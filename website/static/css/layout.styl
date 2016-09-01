@@ -408,6 +408,8 @@ nav
 	box-sizing border-box
 	display block
 	min-height 550px
+	overflow hidden
+	padding 0
 	position relative
 	.copy
 		color grey
@@ -420,17 +422,25 @@ nav
 		margin 1em 0 .5em 0
 	.page
 		box-sizing border-box
-		left 0
+		// left 0
 		min-height 550px
 		padding 2em 3em
-		position absolute
-		top 0
+		// position absolute
+		position relative
+		// top 0
 		&:not(.pageone)
 			display none
+			// margin-top -550px
+			vertical-align top
+			z-index 997
+			// opacity 0
 	& .pageone
+		float left
+		z-index 998
 		i
 			margin-right .2em
 	& .pagetwo
+		float right
 		p
 			&:nth-child(1)
 				color grey
@@ -447,6 +457,7 @@ nav
 					&:nth-child(2)
 						margin-left -3em
 	& .pagethree
+		float right
 		div
 			display inline-block
 			&:nth-child(2)
@@ -458,6 +469,7 @@ nav
 			position absolute
 			right 3em
 	& .pagefour
+		float right
 		div:nth-child(2)
 			display inline-block
 			width 60%
