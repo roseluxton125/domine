@@ -14,27 +14,49 @@ document.onreadystatechange = function () {
 				//'transition.slideRightOut' = HIDE
 				//getElementById devuelve un objeto y getElementsByClassName devuelve un array
 				if(hasClass(document.getElementsByClassName('pageone')[0], 'active')) {
-					Velocity(document.getElementsByClassName('pageone'), {opacity: 0}, {stagger: 50});
-					Velocity(document.getElementsByClassName('pagetwo'), {opacity:1}, {stagger: 50});
+					Velocity(document.getElementsByClassName('pageone'), 'transition.slideRightOut', {stagger: 50});
+					Velocity(document.getElementsByClassName('pagetwo'), 'transition.slideRightIn', {stagger: 50});
 					Velocity(document.getElementsByClassName('prev-button'), 'transition.slideRightIn', {stagger: 50});
 					toggleClass(document.getElementsByClassName('pageone')[0], 'active');
 					toggleClass(document.getElementsByClassName('pagetwo')[0], 'active');
 				} else {
 					if(hasClass(document.getElementsByClassName('pagetwo')[0], 'active')) {
-						Velocity(document.getElementsByClassName('pagetwo'), {opacity: 0}, {stagger: 50});
-						Velocity(document.getElementsByClassName('pagethree'), {opacity:1}, {stagger: 50});
+						Velocity(document.getElementsByClassName('pagetwo'), 'transition.slideRightOut', {stagger: 50});
+						Velocity(document.getElementsByClassName('pagethree'), 'transition.slideRightIn', {stagger: 50});
 						toggleClass(document.getElementsByClassName('pagetwo')[0], 'active');
 						toggleClass(document.getElementsByClassName('pagethree')[0], 'active');
 					} else {
 						if(hasClass(document.getElementsByClassName('pagethree')[0], 'active')) {
-							Velocity(document.getElementsByClassName('pagethree'), {opacity: 0}, {stagger: 50});
-							Velocity(document.getElementsByClassName('pagefour'), {opacity:1}, {stagger: 50});
+							Velocity(document.getElementsByClassName('pagethree'), 'transition.slideRightOut', {stagger: 50});
+							Velocity(document.getElementsByClassName('pagefour'), 'transition.slideRightIn', {stagger: 50});
 							Velocity(document.getElementsByClassName('next-button'), 'transition.slideRightOut', {stagger: 50});
 							toggleClass(document.getElementsByClassName('pagethree')[0], 'active');
 							toggleClass(document.getElementsByClassName('pagefour')[0], 'active');
 						}
 					}
 				}
+				// if(hasClass(document.getElementsByClassName('pageone')[0], 'active')) {
+				// 	Velocity(document.getElementsByClassName('pageone'), {opacity: 0}, {stagger: 50});
+				// 	Velocity(document.getElementsByClassName('pagetwo'), {opacity:1}, {stagger: 50});
+				// 	Velocity(document.getElementsByClassName('prev-button'), 'transition.slideRightIn', {stagger: 50});
+				// 	toggleClass(document.getElementsByClassName('pageone')[0], 'active');
+				// 	toggleClass(document.getElementsByClassName('pagetwo')[0], 'active');
+				// } else {
+				// 	if(hasClass(document.getElementsByClassName('pagetwo')[0], 'active')) {
+				// 		Velocity(document.getElementsByClassName('pagetwo'), {opacity: 0}, {stagger: 50});
+				// 		Velocity(document.getElementsByClassName('pagethree'), {opacity:1}, {stagger: 50});
+				// 		toggleClass(document.getElementsByClassName('pagetwo')[0], 'active');
+				// 		toggleClass(document.getElementsByClassName('pagethree')[0], 'active');
+				// 	} else {
+				// 		if(hasClass(document.getElementsByClassName('pagethree')[0], 'active')) {
+				// 			Velocity(document.getElementsByClassName('pagethree'), {opacity: 0}, {stagger: 50});
+				// 			Velocity(document.getElementsByClassName('pagefour'), {opacity:1}, {stagger: 50});
+				// 			Velocity(document.getElementsByClassName('next-button'), 'transition.slideRightOut', {stagger: 50});
+				// 			toggleClass(document.getElementsByClassName('pagethree')[0], 'active');
+				// 			toggleClass(document.getElementsByClassName('pagefour')[0], 'active');
+				// 		}
+				// 	}
+				// }
 				
 			});
 		}
@@ -45,27 +67,49 @@ document.onreadystatechange = function () {
 				e.preventDefault();
 				//getElementById devuelve un objeto y getElementsByClassName devuelve un array
 				if(hasClass(document.getElementsByClassName('pagefour')[0], 'active')) {
-					Velocity(document.getElementsByClassName('pagefour'), {opacity: 0}, {stagger: 50});
-					Velocity(document.getElementsByClassName('pagethree'), {opacity: 1}, {stagger: 50});
+					Velocity(document.getElementsByClassName('pagefour'), 'transition.slideRightOut', {stagger: 50});
+					Velocity(document.getElementsByClassName('pagethree'), 'transition.slideRightIn', {stagger: 50});
 					Velocity(document.getElementsByClassName('next-button'), 'transition.slideRightIn', {stagger: 50});
 					toggleClass(document.getElementsByClassName('pagefour')[0], 'active');
 					toggleClass(document.getElementsByClassName('pagethree')[0], 'active');
 				} else {
 					if(hasClass(document.getElementsByClassName('pagethree')[0], 'active')) {
-						Velocity(document.getElementsByClassName('pagethree'), {opacity: 0}, {stagger: 50});
-						Velocity(document.getElementsByClassName('pagetwo'), {opacity: 1}, {stagger: 50});
+						Velocity(document.getElementsByClassName('pagethree'), 'transition.slideRightOut', {stagger: 50});
+						Velocity(document.getElementsByClassName('pagetwo'), 'transition.slideRightIn', {stagger: 50});
 						toggleClass(document.getElementsByClassName('pagethree')[0], 'active');
 						toggleClass(document.getElementsByClassName('pagetwo')[0], 'active');
 					} else {
 						if(hasClass(document.getElementsByClassName('pagetwo')[0], 'active')) {
-							Velocity(document.getElementsByClassName('pagetwo'), {opacity: 0}, {stagger: 50});
-							Velocity(document.getElementsByClassName('pageone'), {opacity: 1}, {stagger: 50});
+							Velocity(document.getElementsByClassName('pagetwo'), 'transition.slideRightOut', {stagger: 50});
+							Velocity(document.getElementsByClassName('pageone'), 'transition.slideRightIn', {stagger: 50});
 							Velocity(document.getElementsByClassName('prev-button'), 'transition.slideRightOut', {stagger: 50});
 							toggleClass(document.getElementsByClassName('pagetwo')[0], 'active');
 							toggleClass(document.getElementsByClassName('pageone')[0], 'active');
 						}
 					}
 				}
+				// if(hasClass(document.getElementsByClassName('pagefour')[0], 'active')) {
+				// 	Velocity(document.getElementsByClassName('pagefour'), {opacity: 0}, {stagger: 50});
+				// 	Velocity(document.getElementsByClassName('pagethree'), {opacity: 1}, {stagger: 50});
+				// 	Velocity(document.getElementsByClassName('next-button'), 'transition.slideRightIn', {stagger: 50});
+				// 	toggleClass(document.getElementsByClassName('pagefour')[0], 'active');
+				// 	toggleClass(document.getElementsByClassName('pagethree')[0], 'active');
+				// } else {
+				// 	if(hasClass(document.getElementsByClassName('pagethree')[0], 'active')) {
+				// 		Velocity(document.getElementsByClassName('pagethree'), {opacity: 0}, {stagger: 50});
+				// 		Velocity(document.getElementsByClassName('pagetwo'), {opacity: 1}, {stagger: 50});
+				// 		toggleClass(document.getElementsByClassName('pagethree')[0], 'active');
+				// 		toggleClass(document.getElementsByClassName('pagetwo')[0], 'active');
+				// 	} else {
+				// 		if(hasClass(document.getElementsByClassName('pagetwo')[0], 'active')) {
+				// 			Velocity(document.getElementsByClassName('pagetwo'), {opacity: 0}, {stagger: 50});
+				// 			Velocity(document.getElementsByClassName('pageone'), {opacity: 1}, {stagger: 50});
+				// 			Velocity(document.getElementsByClassName('prev-button'), 'transition.slideRightOut', {stagger: 50});
+				// 			toggleClass(document.getElementsByClassName('pagetwo')[0], 'active');
+				// 			toggleClass(document.getElementsByClassName('pageone')[0], 'active');
+				// 		}
+				// 	}
+				// }
 			});
 		}
 		/*#######################################*/
