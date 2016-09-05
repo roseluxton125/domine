@@ -53,12 +53,27 @@
 
 body
 	font-family 'HelveticaLtStd'
+	font-size 16px
+	+below(600px)
+		font-size 14px
+	+below(450px)
+		font-size 13px
 
 nav
 	font-weight bold
+	.burguer
+		.burguer-icon, .close-icon
+			font-size 1.5em
+		span
+			font-weight normal
+	ul
+		ul
+			li
+				+below(830px)
+					font-size .9em
 
 #about
-	span > span
+	.boldie
 		font-weight bold
 
 #top-content
@@ -87,6 +102,8 @@ nav
 			font-weight bold
 	#messages
 		font-size 2.2em
+		+below(700px)
+			font-size 1.8em
 	#news
 		font-family 'HelveticaLtStd'
 		font-weight bold
@@ -107,6 +124,14 @@ nav
 				font-style italic
 				&:last-child
 					font-weight bold
+	+below(900px)
+		font-size 3em
+	+below(760px)
+		font-size 2.3em
+	+below(510px)
+		font-size 1.8em
+	+below(450px)
+		font-size 1.5em
 
 .two-col
 	.logo
@@ -147,10 +172,22 @@ nav
 
 
 .centro-entrenamiento
+	+below(1100px)
+		font-size .7em
+	+below(770px)
+		font-size .5em
+	+below(550px)
+		font-size .25em
 	#about
 		font-size 1.2em
 		span
 			font-weight bold
+		+below(1100px)
+			font-size 1.5em
+		+below(770px)
+			font-size 1.7em
+		+below(550px)
+			font-size 2.2em
 	.bottom-content
 		p
 			font-weight bold
@@ -158,3 +195,5 @@ nav
 				font-size 7em
 			&:nth-child(2)
 				font-size 2.5em
+	h1
+		padding .5em 0

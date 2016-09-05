@@ -35,6 +35,8 @@ ul
 
 #top-content
 	margin 2em 0 1.2em 0
+	.next-button
+		display none
 	div
 		display inline-block
 		&:nth-child(2)
@@ -42,22 +44,58 @@ ul
 			text-align center
 			a
 				color green-light
+				+below(450px)
+					display block
+					position relative
+			+below(450px)
+				text-align left
+				width 100%
+				.next-button
+					animation next-button-anim 1s infinite
+					display inline
+					float right
+					margin-right .1em
+				p
+					display inline-block
+					line-height 1em
+					vertical-align baseline
+			+below(450px)
+				float none
+		+below(600px)
+			width 50%
+		+below(450px)
+			&:nth-child(1)
+				display none
 	h1
 		color orange
 	img
 		//Fix img inline
 		vertical-align middle
+		+below(600px)
+			max-width 293px
+			width 100%
+	+below(450px)
+		margin 0
+		padding .2em 0
 
 .facebook
 	position absolute
 	top 0
 	right 1em
+	+below(450px)
+		display none
 
 .logo
 	color grey
 	img
 		display inline-block
 		vertical-align bottom
+		+below(600px)
+			width 130px
+		+below(450px)
+			width 100px
+	+below(450px)
+		text-align center
 	p
 		display inline-block
 		margin-bottom .5em
@@ -74,14 +112,50 @@ nav
 	border-radius .5em
 	margin-top 1em
 	padding .3em
+	text-align center
+	.burguer
+		border 1px solid grey
+		border-radius 3px
+		color grey
+		display none
+		padding .4em .5em
+		cursor pointer
+		&:hover
+			.burguer-icon
+				color green-light
+			.close-icon
+				color grey
+		.close-icon
+			color green-light
+			display none
+		.burguer-icon
+			display inline-block
+		.burguer-icon, .close-icon
+			vertical-align bottom
+		span
+			display inline-block
+			margin 0 0 -2px 10px
+			vertical-align bottom
+		+below(830px)
+			display inline-block
 	ul
+		text-align center
 		li
 			display inline-block
+			margin 0 4.5%
 			text-align center
-			width (100% / 6)
 			position relative
 			//Fix line-height
 			margin-top .5em
+			+below(1140px)
+				margin .5em 4% 0 4%
+			+below(1010px)
+				margin .5em 3% 0 3%
+			+below(830px)
+				border-bottom 1px dotted rgba(0,0,0,.2)
+				display block
+				margin 1em 4em
+				text-shadow 1px 1px 0px rgba(0,0,0,1)
 			a
 				color white
 			//Submenu
@@ -90,16 +164,32 @@ nav
 				position absolute
 				left 0
 				top 100%
+				+below(830px)
+					position relative
 				li
 					display block
 					margin 0
 					text-align left
-					width 120%
+					width 150%
 					z-index 999
+					+below(830px)
+						background-color transparent !important
+						border none
+						display block
+						width auto
+					i
+						color green-light
+						display none !important
+						margin-right 2px
+						+below(830px)
+							display inline-block !important
 					a
 						display block
 						//Fix line-height with margin-top grater than margin-bottom
 						padding 5% 5% 2% 5%
+						+below(830px)
+							padding 2% 0 1% 0
+							text-align center
 					&:nth-child(1)
 						background-color green-nav-1
 					&:nth-child(2)
@@ -110,17 +200,33 @@ nav
 						background-color green-nav-4
 			&:hover
 				ul
-					display block
+					+above(831px)
+						display block
+		+below(830px)
+			display none
+	&.open
+		.burguer
+			.burguer-icon
+				display none
+			.close-icon
+				display inline-block
+	+below(830px)
+		background-color transparent
 
 
 /* ==== FOOTER ====================== */
 
 #about
-	margin-top 5em
+	margin-top 4em
 	text-align center
 	p > span
 		border-top 1px solid black
 		padding-top .5em
+	+below(640px)
+		span > span
+			display block
+		.dash
+			display none
 
 .recommendations
 	background-color green-light-bkg
@@ -131,19 +237,34 @@ nav
 		vertical-align middle
 	#logo2
 		text-align right
-		width 20%
+		width 16%
 		img
+			height auto
+			max-width 130px
 			//Fix img inline
 			vertical-align middle
+			width 100%
+		+below(830px)
+			width 20%
+		+below(500px)
+			display block
+			margin-top 1.5em
+			text-align center
+			width 100%
 	#messages
 		color white
 		text-align center
-		width 60%
+		width 68%
 		p
 			line-height 1em
+		+below(830px)
+			width 80%
+		+below(500px)
+			display block
+			width 100%
 	#news
 		text-align left
-		width 20%
+		width 16%
 		div
 			background-color white
 			border-radius .7em
@@ -156,25 +277,42 @@ nav
 				&:nth-child(2)
 					//Fix line-height
 					margin-top -1.2em
+		+below(830px)
+			display none
+	+below(830px)
+		background-image url('../img/two-quotes-left.png'), url('../img/two-quotes-right.png')
+		background-repeat no-repeat, no-repeat 
+		background-position 1% 40%, 75% 40%
+	+below(500px)
+		background-position 1% 5%, 99% 5%
+		background-size 10%, 10%
+	+below(376px)
+		background-position 1% 10%, 99% 10%
 
 .slider
 	background-color green-light
 	color green-dark
-	margin-top 1em
-	padding 1em
+	margin-top .8em
+	padding 5% 0
 	text-align center
 	div, ul
 		display inline-block
 		position relative
 		vertical-align middle
 	img
+		max-width 99px
 		//Fix img inline
 		vertical-align middle
+		width 100%
+	.left-arrow, .right-arrow
+		text-align right
+		width 15%
 	.right-arrow
 		transform rotate(180deg)
 	.slides
 		margin 0 .4em
-		width 560px
+		max-width 560px
+		width 60%
 		li
 			position absolute
 			text-align center
@@ -200,27 +338,68 @@ nav
 
 /* ==== ESCUELA ====================== */
 
-.two-col
-	display inline-block
-	padding 0 5%
-	vertical-align middle
-	width 40%
-	.logo
-		margin-bottom 1em
-		span
-			color green-dark
-			display block
-			text-align center
-	.name
+.school
+	column-count 2
+	column-gap 2em
+	.two-col
 		display block
-	.portrait
-		border-radius 50%
-		& + p
-			margin-top 1em
-			span:nth-child(1)
+		vertical-align middle
+		-webkit-break-inside avoid
+		page-break-inside avoid
+		break-inside avoid
+		.logo
+			margin-bottom 1em
+			span
+				color green-dark
 				display block
-	&:nth-child(2)
-		text-align center
+				text-align center
+		.name
+			display block
+		.portrait
+			border-radius 50%
+			& + p
+				margin-top 1em
+				span:nth-child(1)
+					display block
+					margin-bottom .5em
+		.teacher-quote
+			display none
+			margin 0 auto
+			margin-bottom 2.5em
+			width 80%
+			img, p
+				display inline-block
+				vertical-align middle
+				+below(700px)
+					display block
+			img
+				margin-right 4%
+				max-width 293px
+				width 30%
+				+below(700px)
+					margin 0 auto
+					width 60%
+			p
+				border-top 1px solid green-light
+				border-bottom 1px solid green-light
+				box-sizing border-box
+				margin 0
+				padding 1em 0
+				width 66%
+				+below(700px)
+					margin 1em auto 0 auto
+					width 100%
+			+below(910px)
+				display block
+			+below(700px)
+				text-align center
+				width 90%
+		&:nth-child(2)
+			text-align center
+			+below(910px)
+				display none
+	+below(910px)
+		column-count 1
 
 
 /* ==== CAPACITACIONES ====================== */
@@ -229,6 +408,8 @@ nav
 	box-sizing border-box
 	display block
 	min-height 550px
+	// overflow hidden
+	padding 0
 	position relative
 	.copy
 		color grey
@@ -245,13 +426,21 @@ nav
 		min-height 550px
 		padding 2em 3em
 		position absolute
+		// position relative
 		top 0
 		&:not(.pageone)
 			display none
+			// margin-top -550px
+			vertical-align top
+			z-index 997
+			opacity 0
 	& .pageone
+		// float left
+		z-index 998
 		i
 			margin-right .2em
 	& .pagetwo
+		// float right
 		p
 			&:nth-child(1)
 				color grey
@@ -268,6 +457,7 @@ nav
 					&:nth-child(2)
 						margin-left -3em
 	& .pagethree
+		// float right
 		div
 			display inline-block
 			&:nth-child(2)
@@ -279,6 +469,7 @@ nav
 			position absolute
 			right 3em
 	& .pagefour
+		// float right
 		div:nth-child(2)
 			display inline-block
 			width 60%
@@ -350,6 +541,9 @@ nav
 		color grey
 		margin-bottom 1em
 		text-transform uppercase
+	img
+		max-width 325px
+		width 100%
 
 
 /* ==== GALERIA ====================== */
@@ -359,11 +553,20 @@ nav
 	ul
 		column-count 4
 		column-gap 0
+		+below(984px)
+			column-count 3
+		+below(688px)
+			column-count 2
+		+below(392px)
+			column-count 1
 	li
 		overflow hidden
 		position relative
 		figure
 			margin 0
+			left 100%
+			margin-left -200%
+			position relative
 			a
 				display block
 				img
@@ -387,9 +590,9 @@ nav
 					transition all .3s ease-in-out
 					z-index 1
 		&:hover
-			img
-				// transform scale(1.1)
-				width 100%
+			// img
+			// 	// transform scale(1.1)
+			// 	width 100%
 			a:after
 				opacity .7
 	.single
@@ -403,6 +606,8 @@ nav
 .contact
 	form
 		width 50%
+		+below(700px)
+			width 100%
 		label, input:not([type=submit]), textarea
 			display block
 		input:not([type=submit]), textarea
@@ -480,3 +685,4 @@ nav
 		border-bottom 8px solid orange
 	img
 		vertical-align middle
+		width 100%

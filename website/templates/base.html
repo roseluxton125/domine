@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 	<title>Bienvenido al Sitio de la Escuela de Formación de Johana Dominé</title>
 
 	<link rel="stylesheet" href="{% static "css/styles.css" %}">
@@ -18,6 +19,7 @@
 			<a href="/centro-entrenamiento">
 				<p class="center-big">CENTRO</p>
 				<p class="center-small">de entrenamiento y postura</p>
+				<i class="fa fa-angle-right fa-2x next-button" aria-hidden="true"></i>
 			</a>
 		</div>
 	</div>
@@ -34,16 +36,21 @@
 				<a href="#" class="facebook"><img src="{% static "img/fb_logo.png" %}" alt="Visita nuestra Fan Page!"></a>
 			</div>
 			<nav>
+				<span class="burguer">
+					<i class="fa fa-times close-icon" aria-hidden="true"></i>
+					<i class="fa fa-bars burguer-icon" aria-hidden="true"></i>
+					<span>MENU</span>
+				</span>
 				<ul>
 					<li><a href="/">HOME</a></li><!--
 					--><li><a href="/escuela/">ESCUELA</a></li><!--
-					--><li>
+					--><li class="training-subnav">
 							<a href="#">CAPACITACIONES</a>
 							<ul>
-								<li><a href="/capacitaciones/ppg/">PPG</a></li>
-								<li><a href="/capacitaciones/pactivo/">PILATES ACTIVO</a></li>
-								<li><a href="/capacitaciones/kstretch/">K-STRETCH</a></li>
-								<li><a href="#">PROFESIONALES CERTIFICADOS</a></li>
+								<li><a href="/capacitaciones/ppg/"><i class="fa fa-caret-right" aria-hidden="true"></i> PPG</a></li><!--
+								--><li><a href="/capacitaciones/pactivo/"><i class="fa fa-caret-right" aria-hidden="true"></i> PILATES ACTIVO</a></li><!--
+								--><li><a href="/capacitaciones/kstretch/"><i class="fa fa-caret-right" aria-hidden="true"></i> K-STRETCH</a></li><!--
+								--><!--<li><a href="#">PROFESIONALES CERTIFICADOS</a></li>-->
 							</ul>
 						</li><!--
 					--><li><a href="/eventos/">EVENTOS</a></li><!--
@@ -68,7 +75,11 @@
 	</div>
 	<footer>
 		<div id="about">
-			<p><span><span>Escuela de Formación Profesional Johana Dominé</span> - Arrecifes Pcia. de Buenos Aires</span></p>
+			<p><span>
+				<span class="boldie">Escuela de Formación Profesional Johana Dominé</span>
+				<span class="dash"> - </span>
+				<span>Arrecifes Pcia. de Buenos Aires</span>
+			</span></p>
 		</div>
 		<div class="slider">
 			<div class="left-arrow"><img src="{% static "img/arrow.png" %}" alt=""></div><!--
