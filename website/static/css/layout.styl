@@ -407,8 +407,6 @@ nav
 .training
 	box-sizing border-box
 	display block
-	// min-height 550px
-	// overflow hidden
 	padding 0
 	position relative
 	.page
@@ -416,13 +414,6 @@ nav
 		padding 2em 3em
 		position absolute
 		visibility hidden
-		// &:not(.pageone)
-		// 	// display none
-		// 	// vertical-align top
-		// 	//
-		// 	opacity 0
-		// 	position absolute
-		// 	visibility hidden
 		&.active
 			position relative
 			visibility visible
@@ -472,19 +463,34 @@ nav
 				img
 					//Fix img inline
 					vertical-align middle
+					width 50%
+					max-width 497px
 					&:nth-child(2)
 						margin-left -3em
+						+below(800px)
+							margin -2em auto 0 auto
+						+below(500px)
+							margin-top -1em
+					+below(800px)
+						display block
+						margin 0 auto
+						width 70%
+					+below(500px)
+						width 100%
 	& .pagethree
 		div
 			display inline-block
-			&:nth-child(2)
-				width 70%
+			width 70%
+			// &:nth-child(2)
+			// 	width 70%
 		h3
 			margin-bottom 1em
 		img
 			bottom 0
 			position absolute
 			right 3em
+			width 25%
+			max-width 324px
 	& .pagefour
 		div:nth-child(2)
 			display inline-block

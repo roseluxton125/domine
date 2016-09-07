@@ -889,14 +889,36 @@ nav.open .burguer .close-icon {
 }
 .ppg .pagetwo p:nth-child(3) img {
   vertical-align: middle;
+  width: 50%;
+  max-width: 497px;
 }
 .ppg .pagetwo p:nth-child(3) img:nth-child(2) {
   margin-left: -3em;
 }
+@media only screen and (max-width: 800px) {
+  .ppg .pagetwo p:nth-child(3) img:nth-child(2) {
+    margin: -2em auto 0 auto;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .ppg .pagetwo p:nth-child(3) img:nth-child(2) {
+    margin-top: -1em;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .ppg .pagetwo p:nth-child(3) img {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .ppg .pagetwo p:nth-child(3) img {
+    width: 100%;
+  }
+}
 .ppg .pagethree div {
   display: inline-block;
-}
-.ppg .pagethree div:nth-child(2) {
   width: 70%;
 }
 .ppg .pagethree h3 {
@@ -906,6 +928,8 @@ nav.open .burguer .close-icon {
   bottom: 0;
   position: absolute;
   right: 3em;
+  width: 25%;
+  max-width: 324px;
 }
 .ppg .pagefour div:nth-child(2) {
   display: inline-block;
