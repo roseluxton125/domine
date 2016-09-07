@@ -820,12 +820,25 @@ nav.open .burguer .close-icon {
   padding: 0;
   position: relative;
 }
-.training .copy {
-  color: #6f7072;
-  margin: -0.4em 0 0.8em 0;
+.training .page {
+  box-sizing: border-box;
+  padding: 2em 3em;
+  position: absolute;
+  visibility: hidden;
+}
+.training .page.active {
+  position: relative;
+  visibility: visible;
+}
+.training .page.pageone i {
+  margin-right: 0.2em;
 }
 .training .blue-link {
   color: #009de0;
+}
+.training .copy {
+  color: #6f7072;
+  margin: -0.4em 0 0.8em 0;
 }
 .training .title,
 .training .subtitle {
@@ -834,83 +847,13 @@ nav.open .burguer .close-icon {
 .training .subtitle {
   margin: 1em 0 0.5em 0;
 }
-.training .container {
-  position: relative;
-  overflow: hidden;
-}
-.training .page {
-  box-sizing: border-box;
-  left: 0;
-  padding: 2em 3em;
-  position: absolute;
-  float: left;
-  top: 0;
-}
-.training .page:not(.pageone) {
-  display: none;
-  vertical-align: top;
-  opacity: 0;
-}
-.training .pageone i {
-  margin-right: 0.2em;
-}
-.training .pagetwo p:nth-child(1) {
-  color: #6f7072;
-}
-.training .pagetwo p:nth-child(2) {
-  margin-top: 1em;
-}
-.training .pagetwo p:nth-child(2) span {
-  display: block;
-}
-.training .pagetwo p:nth-child(3) {
-  margin-top: 0.5em;
-  text-align: center;
-}
-.training .pagetwo p:nth-child(3) img {
-  vertical-align: middle;
-}
-.training .pagetwo p:nth-child(3) img:nth-child(2) {
-  margin-left: -3em;
-}
-.training .pagethree div {
-  display: inline-block;
-}
-.training .pagethree div:nth-child(2) {
-  width: 70%;
-}
-.training .pagethree h3 {
-  margin-bottom: 1em;
-}
-.training .pagethree img {
-  bottom: 0;
-  position: absolute;
-  right: 3em;
-}
-.training .pagefour div:nth-child(2) {
-  display: inline-block;
-  width: 60%;
-}
-.training .pagefour div:nth-child(3) {
-  margin-top: 3em;
-}
-.training .pagefour div:nth-child(3) h3 {
-  width: 50%;
-}
-.training .pagefour h3 {
-  margin-bottom: 1em;
-}
-.training .pagefour img {
-  position: absolute;
-  right: 3em;
-  top: 0;
-}
 .training .prev-button,
 .training .next-button {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  z-index: 2;
 }
 .training .prev-button a,
 .training .next-button a {
@@ -927,6 +870,60 @@ nav.open .burguer .close-icon {
   -webkit-animation: next-button-anim 1s infinite;
           animation: next-button-anim 1s infinite;
   right: 7px;
+}
+.ppg .container {
+  position: relative;
+}
+.ppg .pagetwo p:nth-child(1) {
+  color: #6f7072;
+}
+.ppg .pagetwo p:nth-child(2) {
+  margin-top: 1em;
+}
+.ppg .pagetwo p:nth-child(2) span {
+  display: block;
+}
+.ppg .pagetwo p:nth-child(3) {
+  margin-top: 0.5em;
+  text-align: center;
+}
+.ppg .pagetwo p:nth-child(3) img {
+  vertical-align: middle;
+}
+.ppg .pagetwo p:nth-child(3) img:nth-child(2) {
+  margin-left: -3em;
+}
+.ppg .pagethree div {
+  display: inline-block;
+}
+.ppg .pagethree div:nth-child(2) {
+  width: 70%;
+}
+.ppg .pagethree h3 {
+  margin-bottom: 1em;
+}
+.ppg .pagethree img {
+  bottom: 0;
+  position: absolute;
+  right: 3em;
+}
+.ppg .pagefour div:nth-child(2) {
+  display: inline-block;
+  width: 60%;
+}
+.ppg .pagefour div:nth-child(3) {
+  margin-top: 3em;
+}
+.ppg .pagefour div:nth-child(3) h3 {
+  width: 50%;
+}
+.ppg .pagefour h3 {
+  margin-bottom: 1em;
+}
+.ppg .pagefour img {
+  position: absolute;
+  right: 3em;
+  top: 0;
 }
 .kstretch .pageone a,
 .kstretch .pageone p:not(.intro),
