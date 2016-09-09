@@ -242,7 +242,7 @@ nav .burguer span {
   padding: 0.5em 0;
 }
 body {
-  margin: 0;
+  margin: 0 auto;
   max-width: 1280px;
   min-width: 320px;
   padding: 0;
@@ -250,7 +250,7 @@ body {
 body:not(.centro-entrenamiento) {
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 40%;
+  background-position: center center;
   background-size: 240% auto;
 }
 a {
@@ -921,33 +921,84 @@ nav.open .burguer .close-icon {
   display: inline-block;
   width: 70%;
 }
+@media only screen and (max-width: 900px) {
+  .ppg .pagethree div {
+    width: 100%;
+  }
+}
 .ppg .pagethree h3 {
   margin-bottom: 1em;
 }
 .ppg .pagethree img {
+  max-width: 324px;
+}
+.ppg .pagethree img.center {
+  display: none;
+}
+@media only screen and (max-width: 900px) {
+  .ppg .pagethree img.center {
+    display: block;
+    margin: 1em auto;
+    width: 100%;
+  }
+}
+.ppg .pagethree img.lateral {
   bottom: 0;
   position: absolute;
   right: 3em;
   width: 25%;
-  max-width: 324px;
+}
+@media only screen and (max-width: 900px) {
+  .ppg .pagethree img.lateral {
+    display: none;
+  }
 }
 .ppg .pagefour div:nth-child(2) {
   display: inline-block;
   width: 60%;
 }
-.ppg .pagefour div:nth-child(3) {
+@media only screen and (max-width: 900px) {
+  .ppg .pagefour div:nth-child(2) {
+    width: 100%;
+  }
+}
+.ppg .pagefour div:nth-child(4) {
   margin-top: 3em;
 }
-.ppg .pagefour div:nth-child(3) h3 {
+.ppg .pagefour div:nth-child(4) h3 {
   width: 50%;
+}
+@media only screen and (max-width: 900px) {
+  .ppg .pagefour div:nth-child(4) h3 {
+    width: 100%;
+  }
 }
 .ppg .pagefour h3 {
   margin-bottom: 1em;
 }
 .ppg .pagefour img {
+  max-width: 520px;
+}
+.ppg .pagefour img.center {
+  display: none;
+}
+@media only screen and (max-width: 900px) {
+  .ppg .pagefour img.center {
+    display: block;
+    margin: 1em auto;
+    width: 100%;
+  }
+}
+.ppg .pagefour img.lateral {
   position: absolute;
   right: 3em;
   top: 0;
+  width: 50%;
+}
+@media only screen and (max-width: 900px) {
+  .ppg .pagefour img.lateral {
+    display: none;
+  }
 }
 .kstretch .pageone a,
 .kstretch .pageone p:not(.intro),
