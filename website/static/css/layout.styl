@@ -7,8 +7,8 @@ body
 		background-image url('../img/background.jpg')
 		background-repeat no-repeat
 		//background-attachment fixed
-		background-position center center
-		background-size 240% auto
+		background-position center top
+		background-size 250% auto
 
 a
 	text-decoration none
@@ -43,7 +43,7 @@ ul
 			float right
 			text-align center
 			a
-				color green-light
+				color pink
 				+below(450px)
 					display block
 					position relative
@@ -80,7 +80,7 @@ ul
 
 .facebook
 	position absolute
-	top 0
+	top 1em
 	right 1em
 	+below(450px)
 		display none
@@ -170,7 +170,7 @@ nav
 					display block
 					margin 0
 					text-align left
-					width 150%
+					width 240%
 					z-index 999
 					+below(830px)
 						background-color transparent !important
@@ -407,6 +407,7 @@ nav
 .training
 	box-sizing border-box
 	display block
+	overflow hidden
 	padding 0
 	position relative
 	.page
@@ -538,6 +539,28 @@ nav
 			bottom 2em
 			position absolute
 			right 3em
+
+.profesionals
+	padding 2em 3em
+	.two-col
+		display inline-block
+		vertical-align top
+		width 50%
+		.title
+			color grey
+		.names
+			margin-top 2em
+			li
+				color green-dark
+		+below(720px)
+			width 100%
+		&:nth-child(2)
+			margin-top 3em
+	.gallery
+		column-count 2
+		column-gap 0
+		+below(460px)
+			column-count 1
 
 
 @keyframes next-button-anim

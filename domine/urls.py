@@ -27,6 +27,7 @@ urlpatterns = [
     url(r'^capacitaciones/ppg/$', views.ppg, name='ppg'),
     url(r'^capacitaciones/pactivo/$', views.pactivo, name='pactivo'),
     url(r'^capacitaciones/kstretch/$', views.kstretch, name='kstretch'),
+    url(r'^capacitaciones/profesionales/$', views.profesionales, name='profesionales'),
     url(r'^eventos/$', views.events, name='eventos'),
     url(r'^galeria/$', views.gallery, name='galeria'),
     url(r'^contacto/$', views.ContactFormView.as_view(), name='contacto'),

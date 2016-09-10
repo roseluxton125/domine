@@ -180,6 +180,9 @@ nav .burguer span {
 .training .page .pagefour p:nth-child(3) {
   font-style: italic;
 }
+.training.profesionals .title {
+  font-size: 1.5em;
+}
 .events h2 {
   font-size: 2.2em;
 }
@@ -250,8 +253,8 @@ body {
 body:not(.centro-entrenamiento) {
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 240% auto;
+  background-position: center top;
+  background-size: 250% auto;
 }
 a {
   text-decoration: none;
@@ -293,7 +296,7 @@ ul li {
   text-align: center;
 }
 #top-content div:nth-child(2) a {
-  color: #97be0c;
+  color: #e5408c;
 }
 @media only screen and (max-width: 450px) {
   #top-content div:nth-child(2) a {
@@ -354,7 +357,7 @@ ul li {
 }
 .facebook {
   position: absolute;
-  top: 0;
+  top: 1em;
   right: 1em;
 }
 @media only screen and (max-width: 450px) {
@@ -481,7 +484,7 @@ nav ul li ul li {
   display: block;
   margin: 0;
   text-align: left;
-  width: 150%;
+  width: 240%;
   z-index: 999;
 }
 @media only screen and (max-width: 830px) {
@@ -817,6 +820,7 @@ nav.open .burguer .close-icon {
 .training {
   box-sizing: border-box;
   display: block;
+  overflow: hidden;
   padding: 0;
   position: relative;
 }
@@ -1009,6 +1013,46 @@ nav.open .burguer .close-icon {
   bottom: 2em;
   position: absolute;
   right: 3em;
+}
+.profesionals {
+  padding: 2em 3em;
+}
+.profesionals .two-col {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+.profesionals .two-col .title {
+  color: #6f7072;
+}
+.profesionals .two-col .names {
+  margin-top: 2em;
+}
+.profesionals .two-col .names li {
+  color: #00632e;
+}
+@media only screen and (max-width: 720px) {
+  .profesionals .two-col {
+    width: 100%;
+  }
+}
+.profesionals .two-col:nth-child(2) {
+  margin-top: 3em;
+}
+.profesionals .gallery {
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 0;
+     -moz-column-gap: 0;
+          column-gap: 0;
+}
+@media only screen and (max-width: 460px) {
+  .profesionals .gallery {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+  }
 }
 .events h2 {
   color: #00632e;

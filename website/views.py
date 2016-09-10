@@ -20,6 +20,9 @@ def pactivo(request):
 def kstretch(request):
 	return render(request, 'kstretch.html')
 
+def profesionales(request):
+	return render(request, 'profesionales.html')
+
 def events(request):
 	eventos = Evento.objects.all()
 	return render(request, 'eventos.html',{'eventos':eventos})
