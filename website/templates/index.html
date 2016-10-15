@@ -1,12 +1,36 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static "js/idealslider/ideal-image-slider.css" %}">
+<link rel="stylesheet" href="{% static "js/idealslider/themes/default/default.css" %}">
+{% endblock %}
 
 {% block content %}
-<section class="content">
-	<h2>INDEX</h2>
+<section class="home content">
+	<div id="home-slider">
+		<img src="{% static "img/home/home_1.jpg" %}" alt="Minimum required attributes">
+		<img src="{% static "img/home/home_2.jpg" %}" alt="Minimum required attributes">
+		<img src="{% static "img/home/home_3.jpg" %}" alt="Minimum required attributes">
+	</div>
 </section>
 {% endblock %}
 
 {% block messages %}
 <p>la gente demanda tomar éstas clases</p>
 <p>Excelente resultado</p>
+{% endblock %}
+
+{% block closescripts %}
+<script src="{% static "js/idealslider/ideal-image-slider.min.js" %}"></script>
+<script src="{% static "js/idealslider/extensions/bullet-nav/iis-bullet-nav.js" %}"></script>
+<script>
+	var slider = new IdealImageSlider.Slider({
+		selector: '#home-slider',
+		interval: 5000,
+		effect: 'slide'
+	});
+	slider.addBulletNav();
+	slider.start();
+</script>
 {% endblock %}
