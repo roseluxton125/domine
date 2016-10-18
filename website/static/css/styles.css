@@ -1211,15 +1211,18 @@ nav.open .burguer .close-icon {
   margin-bottom: 2em;
 }
 .centro-entrenamiento #about {
-  background-color: #37a962;
   margin-top: 1.5em;
   padding: 3em 0;
 }
 .centro-entrenamiento #about p {
-  color: #fff;
+  color: #e5408c;
 }
 .centro-entrenamiento #about span {
   border: none;
+}
+.centro-entrenamiento #about p > span {
+  border-top: 1px solid #e5408c;
+  padding-top: 0.5em;
 }
 .centro-entrenamiento .bottom-content {
   color: #fff;
@@ -1227,7 +1230,7 @@ nav.open .burguer .close-icon {
   text-align: center;
 }
 .centro-entrenamiento .bottom-content p:nth-child(1) {
-  background-color: #f29500;
+  background-color: #87d5b9;
   line-height: 0.8em;
   padding-top: 0.3em;
 }
@@ -1237,19 +1240,34 @@ nav.open .burguer .close-icon {
   padding-top: 0.3em;
 }
 .centro-entrenamiento .bottom-content p:nth-child(2) span:nth-child(1) {
-  background-color: #67b042;
+  background-color: #e5408c;
   width: 35%;
 }
 .centro-entrenamiento .bottom-content p:nth-child(2) span:nth-child(2) {
-  background-color: #37a962;
+  background-color: #3fbc90;
   width: 65%;
 }
-.centro-entrenamiento .center-green-img {
-  border-bottom: 8px solid #f29500;
+.centro-entrenamiento .content {
+  background-color: #87d5b9;
 }
-.centro-entrenamiento img {
-  vertical-align: middle;
-  width: 100%;
+.centro-entrenamiento .content .centro-gallery {
+  border: 1px dashed #fff;
+  padding: 1em;
+}
+.centro-entrenamiento .content .centro-gallery ul {
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 0;
+     -moz-column-gap: 0;
+          column-gap: 0;
+}
+@media only screen and (max-width: 460px) {
+  .centro-entrenamiento .content .centro-gallery ul {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
+  }
 }
 @-webkit-keyframes next-button-anim {
   0% {

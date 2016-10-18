@@ -709,19 +709,22 @@ nav
 
 .centro-entrenamiento
 	#about
-		background-color green-light-center
+		// background-color green-light-center
 		margin-top 1.5em
 		padding 3em 0
 		p
-			color white
+			color pink
 		span
 			border none
+		p > span
+			border-top 1px solid pink
+			padding-top .5em
 	.bottom-content
 		color white
 		margin-top 2em
 		text-align center
 		p:nth-child(1)
-			background-color orange
+			background-color green-light-center
 			line-height .8em
 			padding-top .3em
 		p:nth-child(2)
@@ -730,13 +733,21 @@ nav
 				line-height 1.5em
 				padding-top .3em
 				&:nth-child(1)
-					background-color green-dark-center
+					background-color pink
 					width 35%
 				&:nth-child(2)
-					background-color green-light-center
+					background-color green-dark-center
 					width 65%
-	.center-green-img
-		border-bottom 8px solid orange
-	img
-		vertical-align middle
-		width 100%
+	.content
+		background-color green-light-center
+		.centro-gallery
+			border 1px dashed white
+			padding 1em
+			ul
+				column-count 2
+				column-gap 0
+				+below(460px)
+					column-count 1
+	// img
+	// 	vertical-align middle
+	// 	width 100%
