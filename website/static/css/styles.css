@@ -232,6 +232,19 @@ nav .burguer span {
     font-size: 2.2em;
   }
 }
+.centro-entrenamiento #top-content {
+  color: #e5408c;
+  overflow: hidden;
+}
+.centro-entrenamiento #top-content .center-big {
+  font-size: 7em;
+  line-height: 0.9em;
+}
+.centro-entrenamiento #top-content .center-small {
+  font-size: 2em;
+  line-height: 1em;
+  margin-top: -0.5em;
+}
 .centro-entrenamiento .bottom-content p {
   font-weight: bold;
 }
@@ -243,6 +256,9 @@ nav .burguer span {
 }
 .centro-entrenamiento h1 {
   padding: 0.5em 0;
+}
+html {
+  margin: 0;
 }
 body {
   margin: 0 auto;
@@ -1268,6 +1284,10 @@ nav.open .burguer .close-icon {
        -moz-column-count: 1;
             column-count: 1;
   }
+}
+.centro-entrenamiento .content .prevent {
+  margin-top: 1em;
+  text-align: right;
 }
 @-webkit-keyframes next-button-anim {
   0% {
