@@ -722,19 +722,24 @@ nav
 		p > span
 			border-top 1px solid pink
 			padding-top .5em
+	#top-content
+		div:nth-child(2)
+			float none
+			padding-left 10%
+			text-align center
 	.bottom-content
 		color white
 		margin-top 2em
 		text-align center
 		p:nth-child(1)
 			background-color green-light-center
-			line-height .8em
-			padding-top .3em
+			// line-height .8em
+			// padding-top .3em
 		p:nth-child(2)
 			span
 				display inline-block
 				line-height 1.5em
-				padding-top .3em
+				// padding-top .3em
 				&:nth-child(1)
 					background-color pink
 					width 35%
@@ -747,13 +752,12 @@ nav
 			border 1px dashed white
 			padding 1em
 			ul
-				column-count 2
+				column-count 3
 				column-gap 0
+				margin 0 auto
+				width 75%
 				+below(460px)
 					column-count 1
 		.prevent
 			margin-top 1em
 			text-align right
-	// img
-	// 	vertical-align middle
-	// 	width 100%

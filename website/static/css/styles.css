@@ -1240,6 +1240,11 @@ nav.open .burguer .close-icon {
   border-top: 1px solid #e5408c;
   padding-top: 0.5em;
 }
+.centro-entrenamiento #top-content div:nth-child(2) {
+  float: none;
+  padding-left: 10%;
+  text-align: center;
+}
 .centro-entrenamiento .bottom-content {
   color: #fff;
   margin-top: 2em;
@@ -1247,13 +1252,10 @@ nav.open .burguer .close-icon {
 }
 .centro-entrenamiento .bottom-content p:nth-child(1) {
   background-color: #87d5b9;
-  line-height: 0.8em;
-  padding-top: 0.3em;
 }
 .centro-entrenamiento .bottom-content p:nth-child(2) span {
   display: inline-block;
   line-height: 1.5em;
-  padding-top: 0.3em;
 }
 .centro-entrenamiento .bottom-content p:nth-child(2) span:nth-child(1) {
   background-color: #e5408c;
@@ -1271,12 +1273,14 @@ nav.open .burguer .close-icon {
   padding: 1em;
 }
 .centro-entrenamiento .content .centro-gallery ul {
-  -webkit-column-count: 2;
-     -moz-column-count: 2;
-          column-count: 2;
+  -webkit-column-count: 3;
+     -moz-column-count: 3;
+          column-count: 3;
   -webkit-column-gap: 0;
      -moz-column-gap: 0;
           column-gap: 0;
+  margin: 0 auto;
+  width: 75%;
 }
 @media only screen and (max-width: 460px) {
   .centro-entrenamiento .content .centro-gallery ul {
