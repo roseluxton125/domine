@@ -287,10 +287,12 @@ body {
   padding: 0;
 }
 body:not(.centro-entrenamiento) {
-  background-image: url("../img/background.jpg");
+  background-image: url("../img/background_crop.jpg");
+  background-position: center -10%;
   background-repeat: no-repeat;
-  background-position: center top;
-  background-size: 250% auto;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #fff;
 }
 a {
   text-decoration: none;
