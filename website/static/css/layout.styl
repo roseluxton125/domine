@@ -727,6 +727,15 @@ nav
 			float none
 			padding-left 10%
 			text-align center
+		+below(601px)
+			div
+				padding 0 !important
+				width 40%
+				&:nth-child(2)
+					float right
+		+below(450px)
+			div
+				width 100%
 	.bottom-content
 		color white
 		margin-top 2em
@@ -734,12 +743,12 @@ nav
 		p:nth-child(1)
 			background-color green-light-center
 			// line-height .8em
-			// padding-top .3em
+			padding-top .3em
 		p:nth-child(2)
 			span
 				display inline-block
 				line-height 1.5em
-				// padding-top .3em
+				padding-top .3em
 				&:nth-child(1)
 					background-color pink
 					width 35%

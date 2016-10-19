@@ -208,7 +208,7 @@ nav .burguer span {
 }
 @media only screen and (max-width: 550px) {
   .centro-entrenamiento {
-    font-size: 0.25em;
+    font-size: 0.3em;
   }
 }
 .centro-entrenamiento #about {
@@ -240,10 +240,25 @@ nav .burguer span {
   font-size: 7em;
   line-height: 0.9em;
 }
+@media only screen and (max-width: 450px) {
+  .centro-entrenamiento #top-content .center-big {
+    font-size: 6em;
+  }
+}
 .centro-entrenamiento #top-content .center-small {
   font-size: 2em;
   line-height: 1em;
   margin-top: -0.5em;
+}
+@media only screen and (max-width: 550px) {
+  .centro-entrenamiento #top-content .center-small {
+    font-size: 3.5em;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .centro-entrenamiento #top-content .center-small {
+    font-size: 3em;
+  }
 }
 .centro-entrenamiento .bottom-content p {
   font-weight: bold;
@@ -253,6 +268,11 @@ nav .burguer span {
 }
 .centro-entrenamiento .bottom-content p:nth-child(2) {
   font-size: 2.5em;
+}
+.centro-entrenamiento .prevent img {
+  height: auto;
+  max-width: 448px;
+  width: 100%;
 }
 .centro-entrenamiento h1 {
   padding: 0.5em 0;
@@ -1245,6 +1265,20 @@ nav.open .burguer .close-icon {
   padding-left: 10%;
   text-align: center;
 }
+@media only screen and (max-width: 601px) {
+  .centro-entrenamiento #top-content div {
+    padding: 0 !important;
+    width: 40%;
+  }
+  .centro-entrenamiento #top-content div:nth-child(2) {
+    float: right;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .centro-entrenamiento #top-content div {
+    width: 100%;
+  }
+}
 .centro-entrenamiento .bottom-content {
   color: #fff;
   margin-top: 2em;
@@ -1252,10 +1286,12 @@ nav.open .burguer .close-icon {
 }
 .centro-entrenamiento .bottom-content p:nth-child(1) {
   background-color: #87d5b9;
+  padding-top: 0.3em;
 }
 .centro-entrenamiento .bottom-content p:nth-child(2) span {
   display: inline-block;
   line-height: 1.5em;
+  padding-top: 0.3em;
 }
 .centro-entrenamiento .bottom-content p:nth-child(2) span:nth-child(1) {
   background-color: #e5408c;
